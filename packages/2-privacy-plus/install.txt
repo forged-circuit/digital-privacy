@@ -1,0 +1,127 @@
+# 🔵 Privacy Plus – Installation Guide
+
+Privacy Plus is the recommended full home protection setup.
+
+It improves Starter Shield by adding stronger filtering, better device coverage, and more consistent network protection.
+
+This guide is designed to be simple and step-by-step.
+
+---
+
+# 🧭 Before You Begin
+
+You will need:
+
+* Access to your router settings
+* A device connected to your Wi-Fi
+* About 15–20 minutes
+* Starter Shield is NOT required (this can be installed fresh)
+
+---
+
+# ⚙️ Step 1: Access Your Router
+
+* Open a web browser
+* Enter your router address (usually `192.168.1.1` or `192.168.0.1`)
+* Log in with your admin username/password
+
+---
+
+# ⚙️ Step 2: Set Network Protection (DNS)
+
+Privacy Plus works by directing your internet traffic through a protected filtering system.
+
+You will update your DNS settings:
+
+* Go to “Internet” or “Network Settings”
+* Find “DNS Settings”
+* Replace existing DNS with your Privacy Plus configuration
+
+Save your changes.
+
+---
+
+# ⚙️ Step 3: Restart Your Network
+
+To apply changes:
+
+* Restart your router
+* Wait 1–2 minutes for internet to reconnect
+
+---
+
+# ⚙️ Step 4: Reconnect Your Devices
+
+Once your network is back online:
+
+* Reconnect phones, laptops, TVs, and smart devices
+* Or restart devices if they do not connect automatically
+
+Privacy Plus will now apply across all devices.
+
+---
+
+# 🧪 Step 5: Confirm Protection is Active
+
+Open a browser and visit normal websites.
+
+You should notice:
+
+* Fewer ads
+* Faster loading pages
+* Reduced tracking content
+* Cleaner browsing experience
+
+---
+
+# 🧠 What Privacy Plus Adds
+
+Compared to Starter Shield, you now get:
+
+* Stronger filtering rules
+* Better coverage across devices
+* More consistent blocking behavior
+* Improved stability for smart home devices
+
+---
+
+# ⚠️ Important Notes
+
+* Some ads may still appear inside apps (this is normal)
+* Certain streaming services may behave slightly differently
+* Changes may take a few minutes to fully apply
+
+If something seems off, restarting your router usually fixes it.
+
+---
+
+# 🧭 When to Use Privacy Plus
+
+Use this if you want:
+
+* Stronger protection than basic setup
+* Better control over network privacy
+* A stable “set it and forget it” system
+
+---
+
+# 🚀 What’s Next?
+
+Once Privacy Plus is installed, you can:
+
+* Keep it as-is (most users do)
+* Upgrade to Business Essentials for more control
+* Or explore advanced protection packages
+
+👉 View all options in `/packages/`
+
+---
+
+# 🧠 Summary
+
+Privacy Plus gives you:
+
+* Full home network protection
+* Stronger ad and tracker blocking
+* Simple setup process
+* Reliable everyday performance
