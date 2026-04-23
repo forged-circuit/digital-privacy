@@ -1,9 +1,0 @@
-xboxlive.com
-playstation.net
-sonyentertainmentnetwork.com
-nintendo.net
-alexa.amazon.com
-avs-alexa.com
-assistant.googleapis.com
-apps.apple.com
-play.googleapis.com

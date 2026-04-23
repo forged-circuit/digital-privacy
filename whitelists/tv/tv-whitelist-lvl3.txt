@@ -1,5 +1,0 @@
-rokutime.com
-roku.com
-samsungads.com
-config.samsungads.com
-googleapis.com

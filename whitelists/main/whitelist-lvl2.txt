@@ -1,9 +1,0 @@
-netflix.com
-nflxvideo.net
-disneyplus.com
-hulu.com
-primevideo.com
-amazonvideo.com
-accounts.google.com
-login.microsoftonline.com
-appleid.apple.com
