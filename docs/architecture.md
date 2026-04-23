@@ -1,228 +1,219 @@
 # Forged Circuit Architecture
 
-This document explains how the DNS Blocklist System is structured and how its components interact.
+This document explains how the Forged Circuit Digital Privacy System is structured and how its components interact.
 
-The goal is to provide a **predictable, scalable, and maintainable** approach to DNS filtering.
+The goal is to provide a simple, scalable, and predictable system for home and business network protection.
 
 ---
 
-## 🧠 Design Principles
+# 🧠 System Design Overview
+
+The system is built around two core layers:
+
+## 1. Protection Plans (User-Facing Layer)
+Located in:/protection-plans/
+
+This is what users interact with first.
+
+It answers:
+> “What type of protection do I want?”
+
+Examples:
+- Home Users
+- Pro Users
+- Business Users
+
+Each plan guides users toward a recommended package.
+
+---
+
+## 2. Packages (Implementation Layer)
+Located in:/packages/
+
+This is the actual system configuration layer.
+
+Packages include:
+- Starter Shield
+- Privacy Plus
+- Business Essentials
+- Pro Business Guard
+- Ultimate Offense
+
+Each package defines:
+- Which filters are used
+- Which rules are applied
+- Which devices are affected
+
+---
+
+# 🧠 Design Principles
 
 This system is built around four core principles:
 
-### 1. Progressive Levels
+## 1. Simplicity First
+Users should never need to understand DNS or filtering logic.
 
-* Each level increases in strictness
-* Users can move up or down without rebuilding their setup
-* No “all-or-nothing” blocking
-
----
-
-### 2. Separation of Concerns
-
-* Blocklists handle **restriction**
-* Whitelists handle **restoration**
-* Device-specific behavior is handled separately (TV system)
+They only choose a protection plan or package.
 
 ---
 
-### 3. Real-World Usability
+## 2. Separation of Concerns
+- Protection Plans → user selection layer
+- Packages → system configuration layer
+- Filters → actual enforcement logic
 
-* Avoid unnecessary breakage
-* Preserve essential services
-* Allow easy troubleshooting
-
----
-
-### 4. Modularity
-
-* Each component can be used independently
-* Lists can be combined or customized
-* System works across multiple DNS platforms
+Each layer has a single responsibility.
 
 ---
 
-## 🔢 Level Architecture
-
-The system is built around **7 progressive levels**:
-
-```
-Level 1 → Level 2 → Level 3 → Level 4 → Level 5 → Level 6 → Level 7
-```
-
-### Key Behavior
-
-* Each level represents an **increase in coverage and aggressiveness**
-* Higher levels may introduce:
-
-  * More tracker blocking
-  * More telemetry blocking
-  * Increased chance of service breakage
+## 3. Real-World Usability
+The system is designed to:
+- Avoid breaking essential services
+- Preserve streaming, banking, and critical apps
+- Reduce false positives
 
 ---
 
-## 🧱 Blocklist Structure
-
-Located in: `blocklist_levels/`
-
-Each file:
-
-* Represents a specific level
-* Contains domains to be blocked
-* Is designed to minimize unnecessary duplication
-
-### Design Intent
-
-* Lower levels → broad, low-risk domains
-* Higher levels → more aggressive and niche domains
+## 4. Modularity
+All components can be used independently:
+- Packages can be upgraded or downgraded
+- Filters can be customized
+- Plans can point to different package combinations
 
 ---
 
-## ✅ Whitelist Architecture
+# 🔢 Package Architecture (Internal System Logic)
 
-Located in: `whitelists/`
+Packages are built using a **progressive protection model**:
 
-Whitelists are designed to **counterbalance blocklists**.
+Starter Shield → Privacy Plus → Business Essentials → Pro Business Guard → Ultimate Offense
 
-### Key Concept
+Each package increases:
+- Tracking protection
+- Ad blocking coverage
+- Network strictness
 
-> Whitelists restore functionality lost due to blocking.
-
----
-
-### 🔗 Whitelist Stacking Logic
-
-This system uses a **layered whitelist approach**:
-
-When using a given level:
-
-* You include the whitelist for that level
-* You may also include lower-level whitelists
-
-#### Example:
-
-For **Level 3 blocking**, you may use:
-
-* `whitelist-lvl1.txt`
-* `whitelist-lvl3.txt`
-
-This allows:
-
-* Base-level functionality (Level 1)
-* Targeted fixes for Level 3 breakage
+Higher packages may increase:
+- Risk of service disruption
+- Need for whitelisting adjustments
 
 ---
 
-### Why This Matters
+# 🧱 Filter Structure (Implementation Layer)
 
-* Prevents over-whitelisting
-* Keeps fixes scoped to their level
-* Makes troubleshooting easier
+Located in:/filters/
 
----
+Filters are split into:
 
-## 📺 TV System Architecture
+## Blocklists
+- Define what is blocked at the DNS level
+- Organized by main and TV categories
 
-Located in: `tv/`
-
-TVs and streaming devices behave differently than general-purpose devices.
-
-### Key Differences
-
-* Many streaming platforms require:
-
-  * Ad domains
-  * Telemetry endpoints
-* Blocking these can break playback entirely
+## Whitelists
+- Restore required services
+- Override block rules when necessary
 
 ---
 
-### Design Approach
+# 🔗 Whitelist Behavior
 
-The TV system is:
+Whitelists operate as a safety override system.
 
-* **Separate from main levels**
-* Designed to preserve streaming functionality
-* Less aggressive by design
+If a domain is:
+1. Blocked by a filter
+2. Allowed by a whitelist
+
+➡ It is permitted
+
+This ensures:
+- Essential services remain functional
+- Breakage can be corrected without reducing protection level
 
 ---
 
-### TV Levels
+# 📺 TV Device System
 
-```
+Located in:/filters/blocklist/tv/
+
+TV and streaming devices are treated differently because:
+
+- Streaming platforms rely on advertising domains
+- Aggressive blocking can break playback
+
+## TV Protection Levels
 TV Level 1 → TV Level 2 → TV Level 3
-```
 
-* Level 1 → Minimal interference
-* Level 2 → Moderate blocking
-* Level 3 → Maximum safe blocking for streaming
+- Level 1: Minimal interference
+- Level 2: Balanced blocking
+- Level 3: Maximum safe filtering for streaming devices
 
 ---
 
-## 🔄 System Interaction
+# 🔄 System Flow
 
-### Standard Device Flow
+## Standard Request Flow
 
-```
 DNS Request
    ↓
-Blocklist (based on level)
+Applied Package Filter
    ↓
-If blocked → denied
-If allowed → continue
+Blocklist evaluation
    ↓
-Whitelist check
+If blocked → request denied
+If not blocked → continue
+   ↓
+Whitelist override check
    ↓
 If whitelisted → allowed
-```
 
 ---
 
-### Key Behavior
+# 🧩 Integration Model
 
-* Blocklists act first
-* Whitelists override when necessary
-* Logs should be used to identify breakage
+This system integrates with:
 
----
+- Pi-hole
+- OPNsense (Unbound DNS)
+- AdGuard Home
+- Other DNS filtering systems
 
-## 🧩 Integration Model
-
-This system is designed to integrate with:
-
-* Pi-hole
-* OPNsense (Unbound DNS)
-* AdGuard Home
-* Other DNS filtering platforms
+All packages are designed to be platform-agnostic.
 
 ---
 
-## 🔧 Customization
+# 🔧 Customization Model
 
 Users can:
-
-* Combine levels
-* Add personal blocklists
-* Create custom whitelist entries
-* Modify behavior per device or VLAN
-
----
-
-## 🧠 Summary
-
-This architecture provides:
-
-* Controlled scaling of privacy levels
-* Clear separation between blocking and restoring
-* Device-specific handling for complex environments
-* A maintainable and extensible structure
+- Choose a protection plan
+- Select a package
+- Add personal whitelist entries
+- Combine or adjust filter levels (advanced users only)
 
 ---
 
-## 📚 Related Documentation
+# 🧠 Key Insight
 
-* Project Overview → `../README.md`
-* Use Cases → `../USE-CASES.md`
-* Contributing → `../CONTRIBUTING.md`
-* Licensing → `licensing.md`
-* Maintained by: Forged Circuit
+This system is NOT built around “levels”.
+
+Instead:
+
+> Levels are internal mechanics used to build packages.
+
+Users interact with:
+- Protection Plans
+- Packages
+
+Not technical levels.
+
+---
+
+# 📚 Related Documentation
+
+- Project Overview → ../README.md
+- Use Cases → ../USE-CASES.md
+- Contributing → ../CONTRIBUTING.md
+- Licensing → licensing.md
+
+---
+
+Maintained by: Forged Circuit
