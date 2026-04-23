@@ -5,35 +5,66 @@ All notable changes to this project will be documented here.
 ---
 
 ## [Unreleased]
-- Ongoing improvements to structure and documentation
+Ongoing improvements to:
+- User protection plans
+- Package-based installation guides
+- Documentation clarity and onboarding flow
+- Structure simplification for home users
 
 ---
 
-## [v1.0.0] - Initial Release
+## [1.0.0] - Initial Public Release
+
 ### Added
-- 7-level blocklist system
-- 4-level whitelist system (initial)
-- Dedicated TV blocklists and whitelists
-- Documentation:
-  - README
-  - architecture.md
-  - licensing.md
+
+#### 🧭 Protection System Launch
+- Introduced structured protection plans:
+  - Home Users
+  - Pro Users
+  - Business
+
+#### 📦 Package System
+- Starter Shield (basic home protection)
+- Privacy Plus (full home network protection)
+- Business Essentials
+- Pro Business Guard
+- Ultimate Offense
+
+#### 🧰 Core Filtering Engine
+- Blocklist system (multi-level internal logic)
+- Whitelist system (multi-level internal logic)
+- TV-specific filtering profiles
+
+#### 📘 Documentation
+- README (project overview)
+- protection-plans (user entry system)
+- package install guides (step-based setup)
+- architecture documentation (system design overview)
 
 ---
 
-## Future Format
+## [Future Roadmap]
 
-### Added
-- New domains
-- New features
+### Planned Improvements
+- Simplified onboarding experience for non-technical users
+- Guided installation flows per package
+- Improved clarity between residential vs business use
+- Dashboard integration (read-only system visibility)
 
-### Changed
-- Adjustments to levels
-- Logic improvements
+### System Improvements
+- Better automation of filter updates
+- Safer rollback mechanisms for blocklists
+- Expanded device compatibility guides
 
-### Fixed
-- False positives
-- Broken services
+---
 
-### Removed
-- Deprecated or invalid domains
+## Fixed
+- Reduced complexity in installation documentation
+- Improved consistency between protection plans and packages
+- Eliminated duplication of package definitions across user categories
+
+---
+
+## Removed
+- Over-reliance on level-based user-facing explanations
+- Redundant documentation of internal filtering logic
