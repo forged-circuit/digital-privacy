@@ -26,6 +26,9 @@ For personal use, families, and home networks.
 
 You will see all available protection options, with simple recommendations.
 
+👉 Start here:
+`/protection-plans/home-users.md`
+
 🔧 Pro Users
 
 For advanced users who want more control and deeper configuration understanding.
@@ -33,7 +36,7 @@ For advanced users who want more control and deeper configuration understanding.
 You will also see all available protection options, with technical detail included.
 
 👉 Start here:
-`/protection-plans/home-users.md`
+`/protection-plans/pro-users.md`
 
 ---
 
