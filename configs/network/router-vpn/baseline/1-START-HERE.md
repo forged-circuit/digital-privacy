@@ -1,120 +1,49 @@
-\# 🌐 Router VPN — Baseline Setup
-
-
+# 🌐 Router VPN — Baseline Setup
 
 This setup enables VPN access using your existing home router.
 
+It is the simplest way to securely access your network remotely.
 
+---
 
-It is designed for simplicity and basic remote access.
-
-
-
-\---
-
-
-
-\# 🧭 Overview
-
-
+# 🧭 Overview
 
 You will:
 
+1. Enable VPN on your router
+2. Connect a device remotely
+3. Verify secure access
 
+---
 
-\* Enable VPN on your router (if supported)
+# ⚙️ Requirements
 
-\* Connect a device as a test client
+* Router with VPN support (OpenVPN or WireGuard)
+* Access to router admin panel
+* Phone or laptop for testing
 
-\* Verify secure remote access
+---
 
+# 🧠 When to Use This
 
+Use Router VPN if:
 
-\---
+* You want a simple setup
+* You are a home user
+* You do NOT have a dedicated firewall (Protectli)
 
+---
 
+# ⚠️ Limitations
 
-\# ⚙️ Requirements
+* Less control than firewall-based VPN
+* Fewer advanced security options
+* Limited segmentation control
 
+---
 
+# 🚀 Next Step
 
-\* VPN-capable router (or ISP router with VPN support)
+Continue to:
 
-\* VPN credentials (provided by router)
-
-\* Device for testing (phone or laptop)
-
-
-
-\---
-
-
-
-\# 🧩 Step 1: Enable VPN on Router
-
-
-
-Log into your router and locate:
-
-
-
-👉 VPN Settings
-
-
-
-Enable:
-
-
-
-\* OpenVPN OR WireGuard (if available)
-
-
-
-\---
-
-
-
-\# 📱 Step 2: Connect a Device
-
-
-
-\* Install VPN client app
-
-\* Import router VPN profile
-
-\* Connect to network remotely
-
-
-
-\---
-
-
-
-\# 🧠 Step 3: Verify Connection
-
-
-
-Check:
-
-
-
-\* External IP changes
-
-\* Internet still works
-
-\* Local network access behaves as expected
-
-
-
-\---
-
-
-
-\# 🎉 Setup Complete
-
-
-
-You now have basic VPN access to your home network.
-
-
-
+👉 2-router-setup.md
