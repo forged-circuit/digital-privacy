@@ -1,4 +1,4 @@
-\# 🏠 Home Assistant — Baseline Setup
+# 🏠 Home Assistant — Baseline Setup
 
 
 
@@ -10,11 +10,11 @@ Home Assistant gives you visibility and control over your home network and devic
 
 
 
-\---
+---
 
 
 
-\# 🧭 Overview
+# 🧭 Overview
 
 
 
@@ -34,29 +34,29 @@ No manual configuration required.
 
 
 
-\---
+---
 
 
 
-\# ⚙️ Requirements
+# ⚙️ Requirements
 
 
 
-\* Dedicated device (recommended: Raspberry Pi)
+* Dedicated device (recommended: Raspberry Pi)
 
-\* Internet connection
+* Internet connection
 
-\* Access to your router
+* Access to your router
 
-\* Computer or phone for setup
-
-
-
-\---
+* Computer or phone for setup
 
 
 
-\# 🧩 Step 1: Install Home Assistant
+---
+
+
+
+# 🧩 Step 1: Install Home Assistant
 
 
 
@@ -72,11 +72,11 @@ Follow the standard installation steps for your hardware.
 
 
 
-\---
+---
 
 
 
-\# 🌐 Step 2: Access Home Assistant
+# 🌐 Step 2: Access Home Assistant
 
 
 
@@ -108,11 +108,11 @@ After installation:
 
 
 
-\---
+---
 
 
 
-\# 📥 Step 3: Import Baseline Backup
+# 📥 Step 3: Import Baseline Backup
 
 
 
@@ -142,27 +142,27 @@ This applies your pre-configured system.
 
 
 
-\---
+---
 
 
 
-\# 🧠 What This Does
+# 🧠 What This Does
 
 
 
-\* Loads your predefined configuration
+* Loads your predefined configuration
 
-\* Sets up dashboards (if included)
+* Sets up dashboards (if included)
 
-\* Applies integrations and system defaults
-
-
-
-\---
+* Applies integrations and system defaults
 
 
 
-\# 🔄 Step 4: Verify System
+---
+
+
+
+# 🔄 Step 4: Verify System
 
 
 
@@ -170,19 +170,19 @@ After reboot:
 
 
 
-\* Log back into Home Assistant
+* Log back into Home Assistant
 
-\* Confirm dashboard loads
+* Confirm dashboard loads
 
-\* Confirm system is responsive
-
-
-
-\---
+* Confirm system is responsive
 
 
 
-\# 🔗 Optional (Later Integration)
+---
+
+
+
+# 🔗 Optional (Later Integration)
 
 
 
@@ -190,11 +190,11 @@ Home Assistant can integrate with:
 
 
 
-\* Pi-hole (for network visibility)
+* Pi-hole (for network visibility)
 
-\* VPN / Firewall (for monitoring)
+* VPN / Firewall (for monitoring)
 
-\* Devices across your network
+* Devices across your network
 
 
 
@@ -202,27 +202,27 @@ No action required now—this happens in higher-tier setups.
 
 
 
-\---
+---
 
 
 
-\# ⚠️ Important Notes
+# ⚠️ Important Notes
 
 
 
-\* Do not modify settings unless instructed
+* Do not modify settings unless instructed
 
-\* First load may take a few minutes
+* First load may take a few minutes
 
-\* Some integrations may take time to initialize
-
-
-
-\---
+* Some integrations may take time to initialize
 
 
 
-\# 🎉 Setup Complete
+---
+
+
+
+# 🎉 Setup Complete
 
 
 
