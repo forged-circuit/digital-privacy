@@ -31,6 +31,7 @@ You will see all available protection options, with simple recommendations.
 For advanced users who want more control and deeper configuration understanding.
 
 You will also see all available protection options, with technical detail included.
+
 👉 Start here:
 `/protection-plans/home-users.md`
 
