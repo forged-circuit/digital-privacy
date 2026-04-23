@@ -1,102 +1,135 @@
 # Contributing Guidelines
 
-Thank you for your interest in contributing.
+Thank you for your interest in contributing to the Digital Privacy project.
 
-This project is structured and curated to maintain consistency, reliability, and real-world usability across different privacy levels and device types.
-
-## 🏷️ Project Ownership
-
-This project is maintained by **Forged Circuit**.
-
-All contributions must preserve attribution and may not remove or replace ownership references.
-
-
-## 🧠 Philosophy
-- Blocklists should be **effective but not unnecessarily destructive**
-- Whitelists should **restore functionality without weakening privacy goals**
-- Each level builds intentionally on the previous level
+This project is designed to provide simple, reliable digital protection systems for home and business users through structured protection packages.
 
 ---
 
-## ✅ What You Can Contribute
+## 🏷️ Project Ownership
 
-### 1. Domain Additions
-- Tracking domains
-- Ad servers
-- Malware/phishing domains
+This project is maintained by Forged Circuit.
 
-### 2. Whitelist Fixes
-- Broken services (streaming, banking, smart devices)
-- False positives
+All contributions must preserve attribution and respect the integrity of the system design.
 
-### 3. Improvements
-- Performance optimizations
-- Organization and structure
-- Documentation enhancements
+---
+
+## 🧠 Project Philosophy
+
+This system is built around one core idea:
+
+- Protection should be effective without breaking everyday use
+- Simplicity is more important than complexity
+- Each protection package builds on the previous one intentionally
+- Stability and usability come before aggressive blocking
+
+---
+
+## 📦 What You Can Contribute
+
+### 1. Domain Improvements
+You may contribute:
+
+- New tracking or advertising domains
+- Malware or phishing sources
+- Legitimate services that should be evaluated for blocking
+
+---
+
+### 2. Whitelist Improvements
+You may contribute fixes for:
+
+- Services that stop working due to filtering
+- False positives affecting common apps or websites
+- Smart home or device compatibility issues
+
+---
+
+### 3. System Improvements
+You may also suggest improvements to:
+
+- Organization of lists
+- Performance and efficiency of updates
+- Documentation clarity
+- Package structure or usability
 
 ---
 
 ## ❌ What Not to Submit
 
-- Entire third-party lists without review
-- Duplicate domains
+To maintain system stability, please avoid:
+
+- Large third-party lists without review
+- Duplicate or redundant entries
 - Overly aggressive blocking that breaks common services
-- Non-domain entries (IPs, regex, etc. unless discussed)
+- Non-domain entries unless explicitly required by the system design
 
 ---
 
-## 📂 File Structure Rules
+## 📂 Data Formatting Rules
 
-- Keep domains **one per line**
-- No comments inside `.txt` lists
+When contributing to list files:
+
+- One domain per line
 - Use lowercase only
-- No trailing spaces
+- No extra spaces or formatting
+- Keep entries clean and minimal
 
 ---
 
-## 🔢 Level Logic
+## 🔢 Protection Level Logic
 
-- Levels are **progressive**
-- Higher levels = stricter blocking
-- Do NOT add low-impact domains to high levels only
+This system uses progressive protection packages:
+
+- Starter levels focus on balanced protection
+- Higher levels increase filtering strength
+- Each level builds intentionally on the previous one
+
+Do not place low-impact entries only in higher tiers unless there is a clear reason.
 
 ---
 
-## 📺 TV Lists
+## 📺 TV & Media Protection Lists
 
-TV lists are separate and must:
+TV-specific lists must:
+
 - Preserve streaming functionality
-- Avoid breaking ads that are required for playback
+- Avoid breaking playback services
+- Balance ad filtering with usability
 
 ---
 
-## 🔍 Submission Process
+## 🔍 Contribution Process
 
-1. Fork the repository
-2. Create a new branch
-3. Make your changes
-4. Submit a Pull Request with:
-   - Clear explanation
-   - Reason for addition/removal
-   - Any testing performed
+1. Fork the repository  
+2. Create a feature branch  
+3. Make your changes  
+4. Submit a pull request  
+
+Please include:
+
+- Clear explanation of the change
+- Reason for addition or removal
+- Any testing or observed behavior
 
 ---
 
 ## ⚖️ Review Policy
 
-All submissions are reviewed before merging.
+All contributions are reviewed before merging.
 
-Maintainer reserves the right to:
-- Modify submissions
-- Reject changes
-- Reassign domains to different levels
+Maintainers may:
+
+- Modify submissions for consistency
+- Reject changes that impact stability
+- Reassign entries to more appropriate protection levels
 
 ---
 
 ## 🧾 Attribution
 
-By contributing, you agree that your contributions will be part of this open-source project and may be used commercially under the project license.
+By contributing, you agree that your submissions become part of this project and may be used under the project license, including commercial use where applicable.
 
 ---
 
-Thanks for helping improve this project.
+Thank you for helping improve Digital Privacy systems.
