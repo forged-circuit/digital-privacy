@@ -1,0 +1,124 @@
+# LICENSE-DATA
+
+## DNS Blocklist System — Data License
+
+Copyright (c) 2026
+
+This license applies to all data files within this repository, including but not limited to:
+
+* `blocklist_levels/`
+* `whitelists/`
+* `tv/`
+
+---
+
+## 1. Definitions
+
+**“Data”** refers to all domain lists, including blocklists and whitelists contained in this repository.
+
+**“You”** refers to any individual or entity using, copying, modifying, or distributing the Data.
+
+---
+
+## 2. Permission
+
+Permission is hereby granted, free of charge, to use, copy, modify, and distribute the Data, subject to the conditions below.
+
+---
+
+## 3. Attribution Requirement (MANDATORY)
+
+You MUST provide clear and visible attribution in all cases where the Data is used, modified, or distributed.
+
+Attribution must:
+
+* Include a reference to this project
+* Include a link to the original repository (if distributed digitally)
+* Be visible in documentation, user interface, or accompanying materials
+
+### Examples of acceptable attribution:
+
+* “Includes data from the DNS Blocklist System project”
+* A link in a README or documentation page
+* A visible credit within a UI or dashboard
+
+Failure to provide attribution constitutes a violation of this license.
+
+---
+
+## 4. Commercial Use
+
+Commercial use of the Data is permitted, including within:
+
+* Paid products
+* SaaS platforms
+* Managed services
+* Enterprise environments
+
+**Provided that all license conditions are met**, including attribution.
+
+---
+
+## 5. Restrictions
+
+You may NOT:
+
+* Remove or obscure attribution
+* Redistribute the Data as a standalone product without clear attribution
+* Sell the Data alone without substantial modification or added value
+* Misrepresent the origin or authorship of the Data
+
+---
+
+## 6. Modifications
+
+You may modify and adapt the Data.
+
+If you redistribute modified versions, you must:
+
+* Retain attribution
+* Clearly indicate that changes were made
+* Not imply the original author endorses your modifications
+
+---
+
+## 7. No Endorsement
+
+Use of this Data does not grant permission to:
+
+* Use the project name for promotion without permission
+* Suggest endorsement by the original author
+
+---
+
+## 8. Disclaimer of Warranty
+
+The Data is provided “as is”, without warranty of any kind, express or implied, including but not limited to:
+
+* Accuracy
+* Completeness
+* Fitness for a particular purpose
+
+---
+
+## 9. Limitation of Liability
+
+In no event shall the author be liable for any claim, damages, or other liability arising from:
+
+* Use of the Data
+* Inability to use the Data
+* Service disruption or breakage
+
+---
+
+## 10. Visibility Request (Non-Binding)
+
+If you use this Data in a commercial product or service, you are **strongly encouraged** to notify the maintainer.
+
+This is a request for transparency and community awareness and is **not a legal requirement**.
+
+---
+
+## 11. Acceptance
+
+By using, copying, modifying, or distributing this Data, you agree to the terms of this license.
