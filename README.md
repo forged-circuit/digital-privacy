@@ -1,187 +1,118 @@
-# Forged Circuit DNS Blocklist System
+# 🛡️ Forged Circuit Digital Privacy System
 
-A structured digital privacy system designed to help users protect their home network from ads, trackers, and unwanted connections.
+A modular network protection and DNS filtering system for homes and small businesses.
 
-Built for use with:
-- Pi-hole
-- OPNsense
-- AdGuard Home
-- Other DNS filtering systems
+This system blocks ads, trackers, and malicious traffic at the network level using continuously updated DNS intelligence.
 
 ---
 
-# 🧭 What This Project Is
+# 🧭 What This System Includes
 
-This system is designed for real-world home users who want:
+Digital Privacy is built from two core components:
 
-- Simple setup options
-- Scalable protection levels
-- Control over what gets blocked
-- A way to improve privacy over time
+## 1. 🛡️ Protection System (User Installations)
 
-You do NOT need to understand networking to use it.
+* Pi-hole network protection (Tier 1)
+* Password & identity security (Tier 3)
+* VPN & firewall protection (Tier 5)
+* Monitoring dashboards (Tier 7)
+* Backup & redundancy (Tier 4)
+* Honeypot detection (Tier 8)
 
----
-
-# 🧩 How This System Is Organized
-
-This project is split into two simple parts:
-
-## 1. Protection Plans (What you choose)
-
-Located in:
-/protection-plans/
-
-These are beginner-friendly guides that help you decide what level of protection you need:
-
-- Home Users
-- Pro Users
-- Business Users
-
-Each guide tells you exactly where to start.
+These are installed as packages.
 
 ---
 
-## 2. Packages (What you install)
+## 2. 📡 DNS Filtering Intelligence Layer (Core Engine)
 
-Located in:
-/packages/
+This repository also includes a continuously maintained filtering system:
 
-These are the actual installable configurations:
+* `/filters/blocklist/` → domain blocking rules
+* `/filters/whitelists/` → allowed exceptions
+* `/filters/tv/` → smart TV-specific filtering rules
+* Automated update scripts for continuous maintenance
 
-- Starter Shield
-- Privacy Plus
-- Business Essentials
-- Pro Business Guard
-- Ultimate Offense
-
-Each package contains setup instructions and DNS lists.
+This layer powers all Pi-hole deployments in the system.
 
 ---
 
-# 🔒 Protection Levels (Behind the Scenes)
+# 🔄 Continuous Updates
 
-Each package uses a structured level system:
+DNS filtering data is automatically updated through GitHub workflows.
 
-| Level | Description |
-|------|------------|
-| Level 1 | Minimal filtering (baseline) |
-| Level 2 | Light ad + tracker blocking |
-| Level 3 | Balanced protection (recommended) |
-| Level 4 | Strong privacy protection |
-| Level 5 | Advanced blocking |
-| Level 6 | Power-user configuration |
-| Level 7 | Maximum protection mode |
+This ensures:
 
-> Higher levels provide stronger privacy but may require additional whitelist tuning.
+* Blocklists stay current
+* New threats are added over time
+* False positives can be corrected via whitelists
+* TV and device-specific rules remain optimized
 
 ---
 
-# 🧩 Key Features
+# 📦 Choose Your Protection Level
 
-- 7-level DNS filtering system
-- Matching whitelist system to restore broken services
-- Dedicated TV / streaming protection lists
-- Compatible with major DNS platforms
-- Gradual upgrade path from simple → advanced protection
+## 🟢 Starter Shield
 
----
+Basic network protection using Tier 1 filtering system.
 
-# 📺 TV / Streaming Support
+## 🔵 Privacy Plus
 
-Located in:
-/tv/
+Full home protection system with identity security.
 
-These lists are designed specifically for smart TVs and streaming devices.
+## 🟡 Business Essentials
 
-They help prevent:
-- Streaming service breakage
-- App login issues
-- Playback interruptions
+Small business network protection stack.
 
----
+## 🟠 Pro Business Guard
 
-# ⚙️ How to Use
+Adds monitoring and visibility dashboards.
 
-## Step 1: Choose a Protection Plan
-Go to:
-/protection-plans/
+## 🔴 Ultimate Offense
 
-Pick:
-- Home User
-- Pro User
-- Business
+Full system including backup, monitoring, and honeypot detection.
+
+👉 Full install guides: `/packages/`
 
 ---
 
-## Step 2: Select a Package
+# 🧠 How It Works
 
-Choose a package:
-
-- Starter Shield (basic protection)
-- Privacy Plus (recommended home setup)
-- Business Essentials (small business)
-- Pro Business Guard (advanced monitoring)
-- Ultimate Offense (full protection suite)
+1. DNS filtering rules are maintained in this repository
+2. Pi-hole applies those rules at the network level
+3. Packages install and configure the system per tier
+4. Automated updates keep filtering intelligence current
 
 ---
 
-## Step 3: Install
+# ⚙️ What You Will Need
 
-Each package contains step-by-step instructions.
-
----
-
-## Step 4: Add to DNS System
-
-Use with:
-- Pi-hole
-- OPNsense
-- AdGuard Home
+* Router access
+* One setup device (computer recommended)
+* Ability to follow step-by-step instructions
 
 ---
 
-# 📚 Documentation
+# ⚠️ Important Notes
 
-- Architecture → `/docs/architecture.md`
-- Licensing → `/docs/licensing.md`
-- Use Cases → `/USE-CASES.md`
-
----
-
-# 🤝 Contributing
-
-Contributions are welcome but must follow project structure and maintain usability for non-technical users.
-
-See: `CONTRIBUTING.md`
+* DNS filtering rules are continuously updated
+* Packages use these rules automatically
+* You can deploy without modifying any filter files
+* Advanced users may customize whitelists or blocklists
 
 ---
 
-# ⚠️ Disclaimer
+# 🧠 Key Concept
 
-This system may block websites, services, or applications depending on the selected protection level.
+This system is both:
 
-Use at your own discretion.
-
-See: `DISCLAIMER.md`
-
----
-
-# 📜 License
-
-This project uses a dual-license model:
-
-- Code → `LICENSE`
-- Data (blocklists/whitelists) → `LICENSE-DATA`
+> 🛡️ a network protection platform
+> 📡 and a live DNS intelligence dataset
 
 ---
 
-# 🧠 Final Note
+# 🚀 Start Here
 
-This system is designed to be:
+👉 Choose your path:
 
-- Easy for beginners
-- Scalable for advanced users
-- Practical for real home networks
-
-Start simple. Upgrade when needed. Stay in control.
+* `/protection-plans/`
+* `/packages/`
