@@ -1,219 +1,147 @@
-# Forged Circuit Architecture
+# 🧠 Forged Circuit System Architecture Overview
 
-This document explains how the Forged Circuit Digital Privacy System is structured and how its components interact.
+Digital Privacy is a modular network security and DNS filtering system designed for homes and small businesses.
 
-The goal is to provide a simple, scalable, and predictable system for home and business network protection.
-
----
-
-# 🧠 System Design Overview
-
-The system is built around two core layers:
-
-## 1. Protection Plans (User-Facing Layer)
-Located in:/protection-plans/
-
-This is what users interact with first.
-
-It answers:
-> “What type of protection do I want?”
-
-Examples:
-- Home Users
-- Pro Users
-- Business Users
-
-Each plan guides users toward a recommended package.
+It operates through three connected layers:
 
 ---
 
-## 2. Packages (Implementation Layer)
-Located in:/packages/
+# 🧩 1. DNS Intelligence Layer (Core Data System)
 
-This is the actual system configuration layer.
+This is the foundation of the entire system.
 
-Packages include:
-- Starter Shield
-- Privacy Plus
-- Business Essentials
-- Pro Business Guard
-- Ultimate Offense
+It provides continuously maintained filtering rules used across all deployments.
 
-Each package defines:
-- Which filters are used
-- Which rules are applied
-- Which devices are affected
+### 📂 Located in:
+
+* `/filters/blocklist/`
+* `/filters/whitelists/`
+* `/filters/tv/`
+
+### 🧠 What it does:
+
+* Blocks ads, trackers, and malicious domains
+* Maintains allowlists to prevent false positives
+* Provides device-specific filtering rules (e.g., smart TVs)
+* Continuously updates via automated scripts
+
+### 🔄 Update System:
+
+Automated workflows keep these lists current using scheduled scripts.
+
+This ensures all deployments stay protected without manual updates.
+
+---
+
+# ⚙️ 2. Deployment Layer (Packages System)
+
+This layer turns DNS intelligence into usable systems for real users.
+
+### 📂 Located in:
+
+* `/packages/`
+
+### 🧠 What it does:
+
+Each package is a pre-built combination of **tiers (1–8)** that define system capability.
+
+Instead of manually configuring systems, users select a package and follow an install guide.
 
 ---
 
-# 🧠 Design Principles
+### 🧱 Tier System Overview:
 
-This system is built around four core principles:
-
-## 1. Simplicity First
-Users should never need to understand DNS or filtering logic.
-
-They only choose a protection plan or package.
+* Tier 1 → Pi-hole (core DNS filtering)
+* Tier 2a → Home network assistance
+* Tier 2b → Password manager (Vaultwarden)
+* Tier 3 → Combined identity + home system
+* Tier 4 → Backup & redundancy
+* Tier 5 → Firewall & VPN access
+* Tier 6 → Network infrastructure improvements
+* Tier 7 → Monitoring dashboards
+* Tier 8 → Honeypot intrusion detection
 
 ---
+
+### 📦 Packages are built from these tiers:
+
+* Starter Shield → Tier 1 + optional Tier 2
+* Privacy Plus → Tier 1 + Tier 3
+* Business Essentials → Tier 1 + Tier 3 + Tier 5 + Tier 6
+* Pro Business Guard → Business Essentials + Tier 7
+* Ultimate Offense → All tiers (1–8)
+
+---
+
+# 🧭 3. User Guidance Layer (Onboarding System)
+
+This layer helps users understand and choose a setup.
+
+### 📂 Located in:
+
+* `/protection-plans/`
+
+### 🧠 What it does:
+
+* Explains available protection levels
+* Helps users choose a package
+* Provides simplified descriptions for non-technical users
+* Separates guidance for Home, Pro, and Business users
+
+---
+
+# 🔄 How the System Works (End-to-End Flow)
+
+The system operates in this sequence:
+
+1. DNS filtering rules are defined in `/filters/`
+2. Packages apply those rules through Pi-hole deployments
+3. Users select a package from `/protection-plans/`
+4. Installation guides configure the system on their network
+5. Automated updates keep filtering rules current
+
+---
+
+# 🧠 Key Design Principles
+
+## 1. Modular Design
+
+Each tier represents a reusable capability.
 
 ## 2. Separation of Concerns
-- Protection Plans → user selection layer
-- Packages → system configuration layer
-- Filters → actual enforcement logic
 
-Each layer has a single responsibility.
+* Filters = data
+* Packages = deployment
+* Docs = user understanding
 
----
+## 3. Scalable Complexity
 
-## 3. Real-World Usability
-The system is designed to:
-- Avoid breaking essential services
-- Preserve streaming, banking, and critical apps
-- Reduce false positives
+Users can start simple and expand without rebuilding their system.
 
----
+## 4. Automation First
 
-## 4. Modularity
-All components can be used independently:
-- Packages can be upgraded or downgraded
-- Filters can be customized
-- Plans can point to different package combinations
+DNS filtering updates are handled automatically via workflows.
 
 ---
 
-# 🔢 Package Architecture (Internal System Logic)
+# ⚠️ Important Notes
 
-Packages are built using a **progressive protection model**:
-
-Starter Shield → Privacy Plus → Business Essentials → Pro Business Guard → Ultimate Offense
-
-Each package increases:
-- Tracking protection
-- Ad blocking coverage
-- Network strictness
-
-Higher packages may increase:
-- Risk of service disruption
-- Need for whitelisting adjustments
+* This system is designed for home and small business environments
+* No manual DNS maintenance is required for normal users
+* Advanced users may customize filter rules if desired
+* Packages are independent and upgradeable
 
 ---
 
-# 🧱 Filter Structure (Implementation Layer)
+# 🧠 Summary
 
-Located in:/filters/
+Digital Privacy is not just a Pi-hole configuration.
 
-Filters are split into:
+It is a layered system consisting of:
 
-## Blocklists
-- Define what is blocked at the DNS level
-- Organized by main and TV categories
+* 📡 DNS intelligence (filters)
+* ⚙️ Deployment packages (tiers)
+* 🧭 User onboarding (guidance docs)
 
-## Whitelists
-- Restore required services
-- Override block rules when necessary
+Together, they form a continuously updated network protection ecosystem.
 
----
-
-# 🔗 Whitelist Behavior
-
-Whitelists operate as a safety override system.
-
-If a domain is:
-1. Blocked by a filter
-2. Allowed by a whitelist
-
-➡ It is permitted
-
-This ensures:
-- Essential services remain functional
-- Breakage can be corrected without reducing protection level
-
----
-
-# 📺 TV Device System
-
-Located in:/filters/blocklist/tv/
-
-TV and streaming devices are treated differently because:
-
-- Streaming platforms rely on advertising domains
-- Aggressive blocking can break playback
-
-## TV Protection Levels
-TV Level 1 → TV Level 2 → TV Level 3
-
-- Level 1: Minimal interference
-- Level 2: Balanced blocking
-- Level 3: Maximum safe filtering for streaming devices
-
----
-
-# 🔄 System Flow
-
-## Standard Request Flow
-
-DNS Request
-   ↓
-Applied Package Filter
-   ↓
-Blocklist evaluation
-   ↓
-If blocked → request denied
-If not blocked → continue
-   ↓
-Whitelist override check
-   ↓
-If whitelisted → allowed
-
----
-
-# 🧩 Integration Model
-
-This system integrates with:
-
-- Pi-hole
-- OPNsense (Unbound DNS)
-- AdGuard Home
-- Other DNS filtering systems
-
-All packages are designed to be platform-agnostic.
-
----
-
-# 🔧 Customization Model
-
-Users can:
-- Choose a protection plan
-- Select a package
-- Add personal whitelist entries
-- Combine or adjust filter levels (advanced users only)
-
----
-
-# 🧠 Key Insight
-
-This system is NOT built around “levels”.
-
-Instead:
-
-> Levels are internal mechanics used to build packages.
-
-Users interact with:
-- Protection Plans
-- Packages
-
-Not technical levels.
-
----
-
-# 📚 Related Documentation
-
-- Project Overview → ../README.md
-- Use Cases → ../USE-CASES.md
-- Contributing → ../CONTRIBUTING.md
-- Licensing → licensing.md
-
----
-
-Maintained by: Forged Circuit
