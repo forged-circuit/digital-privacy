@@ -1,74 +1,102 @@
 # Use Cases
 
-This project is designed to support different privacy and usability needs.
+This system is designed to give you different levels of digital protection depending on your needs.
+
+Instead of focusing on technical settings, choose the outcome that fits your situation.
 
 ---
 
 ## 🏠 1. Family Safe Setup
-**Recommended Level:** 2–3
+Recommended Package: Starter Shield / Privacy Plus (Light Mode)
 
-- Blocks most ads and trackers
-- Minimal breakage
-- Safe for shared home networks
+- Blocks most ads and tracking
+- Designed for shared home networks
+- Minimal disruption to everyday apps and websites
+- Easy to manage with little to no maintenance
+
+👉 Best for: families, beginners, general home use
 
 ---
 
 ## 🔒 2. Balanced Privacy (Default)
-**Recommended Level:** 3–4
+Recommended Package: Privacy Plus
 
 - Strong ad and tracker blocking
-- Occasional minor breakage
-- Good balance of usability and privacy
+- Good balance between privacy and usability
+- Occasional sites may need adjustment or whitelist updates
+- Recommended starting point for most users
+
+👉 Best for: everyday users who want better privacy without complexity
 
 ---
 
 ## 🧠 3. Advanced Privacy User
-**Recommended Level:** 5–6
+Recommended Package: Pro Business Guard (Home Use Mode)
 
 - Aggressive tracking and telemetry blocking
-- Some services may require manual whitelisting
-- Ideal for power users
+- Removes most background data collection
+- Some apps or services may require manual fixes
+- More control over network behavior
+
+👉 Best for: power users and privacy-focused individuals
 
 ---
 
-## ☠️ 4. Maximum / Paranoid Mode
-**Recommended Level:** 7
+## ☠️ 4. Maximum Protection Mode
+Recommended Package: Ultimate Offense
 
-- Maximum blocking
-- High likelihood of breakage
-- Requires active whitelist management
+- Maximum blocking strength across the network
+- High chance of requiring whitelist adjustments
+- Removes almost all tracking and telemetry sources
+- Requires active awareness of what is being blocked
+
+👉 Best for: advanced users who want strict control
 
 ---
 
 ## 📺 5. Smart TV / Streaming Devices
-**Use:** TV blocklists + TV whitelists
+Recommended Setup: TV Filter Profiles (Special Configuration)
 
-- Designed to preserve streaming functionality
-- Prevents over-blocking that breaks apps
-- Separate from main network levels
+- Optimized for streaming devices
+- Prevents over-blocking that breaks apps like Netflix, YouTube, etc.
+- Uses separate TV-specific filtering rules
+
+👉 Best for: TVs, streaming boxes, media devices
 
 ---
 
 ## 🧪 6. Testing / Debug Mode
-**Recommended Level:** 1
+Recommended Package: Starter Shield (Minimal Mode)
 
-- Minimal blocking
-- Useful for troubleshooting issues
+- Light filtering for troubleshooting
 - Helps identify false positives
+- Useful when diagnosing network issues
+
+👉 Best for: debugging, setup validation, troubleshooting
 
 ---
 
-## 🧩 Tips
+# 🧩 Important Tips
 
-- Always pair blocklists with corresponding whitelists
-- Increase levels gradually
-- Test after each change
-- Keep logs enabled to identify breakage
+- Start with a lower package and upgrade gradually
+- Every network behaves differently—test before increasing protection
+- Whitelisting is normal and expected in stronger setups
+- Logs help you understand what is being blocked
 
 ---
 
-## 🧠 Recommended Strategy
+# 🧠 Recommended Strategy
 
-Start at Level 2 or 3 → monitor → increase as needed.
+1. Start with **Starter Shield or Privacy Plus**
+2. Monitor network behavior
+3. Upgrade only if needed
+4. Adjust using whitelists instead of disabling protection
 
-Avoid jumping directly to high levels unless you are prepared to troubleshoot.
+---
+
+# ⚠️ Final Note
+
+Higher protection does not always mean better experience.
+
+The goal is:
+> maximum protection with minimum disruption
