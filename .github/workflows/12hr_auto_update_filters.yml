@@ -1,0 +1,55 @@
+name: Update blocklists (every 12 hours)
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"  # every 12 hours
+  workflow_dispatch:         # manual trigger
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests idna
+
+      - name: Run updater
+        run: |
+          python scripts/update_blocklists.py
+
+      - name: Commit & push if changed
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Add updated filter files (NEW STRUCTURE)
+          git add filters/blocklist/main/*.txt \
+                 filters/blocklist/tv/*.txt \
+                 filters/whitelists/main/*.txt \
+                 filters/whitelists/tv/*.txt
+
+          # Commit only if changes exist
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto-update blocklists (12h schedule)"
+            git push
+          else
+            echo "No changes detected; skipping commit."
+          fi
