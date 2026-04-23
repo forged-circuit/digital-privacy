@@ -1,132 +1,48 @@
-\# 🔐 Protectli VPN — Baseline Setup
+# 🔐 Protectli VPN (WireGuard) — Baseline Setup
 
+This setup creates a secure VPN using your Protectli firewall.
 
+It is the recommended method for advanced users and business setups.
 
-This setup uses your Protectli firewall to run a full WireGuard VPN server.
+---
 
-
-
-It is the advanced remote access solution for your network.
-
-
-
-\---
-
-
-
-\# 🧭 Overview
-
-
+# 🧭 Overview
 
 You will:
 
+1. Install WireGuard on the firewall
+2. Configure VPN server
+3. Add client devices
+4. Apply firewall rules
 
+---
 
-\* Install WireGuard on firewall
+# ⚙️ Requirements
 
-\* Configure VPN server
+* Protectli firewall already configured
+* Admin access to firewall UI
+* Internet connection with port forwarding capability
 
-\* Add client devices
+---
 
-\* Secure firewall rules
+# 🧠 When to Use This
 
+Use Protectli VPN if:
 
+* You want full control of your network
+* You are using VLANs
+* You need secure remote access
 
-\---
+---
 
+# ⚠️ Important
 
+This method is more advanced than router VPN, but much more secure and flexible.
 
-\# ⚙️ Requirements
+---
 
+# 🚀 Next Step
 
+Continue to:
 
-\* Protectli firewall already installed
-
-\* Admin access to firewall UI
-
-\* External domain or static IP (optional)
-
-
-
-\---
-
-
-
-\# 🧩 Step 1: Install WireGuard
-
-
-
-Install WireGuard package on firewall OS.
-
-
-
-\---
-
-
-
-\# 🧩 Step 2: Create VPN Server
-
-
-
-Configure:
-
-
-
-\* VPN subnet (separate from LAN)
-
-\* Port (default WireGuard: 51820)
-
-\* Encryption keys
-
-
-
-\---
-
-
-
-\# 📱 Step 3: Add Clients
-
-
-
-Generate profiles for:
-
-
-
-\* phone
-
-\* laptop
-
-\* remote access devices
-
-
-
-\---
-
-
-
-\# 🔐 Step 4: Firewall Integration
-
-
-
-Allow:
-
-
-
-\* VPN → LAN access
-
-\* Block VPN → admin interface (optional hardening)
-
-
-
-\---
-
-
-
-\# 🎉 Setup Complete
-
-
-
-You now have secure remote access via Protectli VPN.
-
-
-
+👉 2-wireguard-install.md
