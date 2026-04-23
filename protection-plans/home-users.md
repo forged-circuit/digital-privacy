@@ -1,29 +1,32 @@
-# 🏠 Home Users – Protection Plans
+# 🏠 Home Users
 
-This page shows all available protection options for home use.
-
-You are not locked into any choice. You can select any package below based on your needs.
-
-If you’re unsure, we recommend starting with **Privacy Plus**.
+This section is for personal use, families, and home networks.
 
 ---
 
-# 🧭 Choose Your Protection Level
+# 🧭 Recommended Setup (Most Users)
+
+If you are unsure where to start:
+
+👉 **Start with Privacy Plus (recommended)**
+👉 Or begin with Starter Shield if you want something lighter
+
+These two cover most home use cases.
+
+---
+
+# 📦 All Available Home Packages
+
+You are free to choose any of the following:
 
 ## 🟢 Starter Shield
 
-Basic network protection for ads and trackers.
+Basic network protection.
 
-**Best for:**
+* Pi-hole (Tier 1)
+* Optional: Home setup OR password manager
 
-* Simple home use
-* Basic privacy improvement
-* First-time setup
-
-**What it does:**
-
-* Blocks ads at the network level
-* Reduces tracking across devices
+👉 Best for beginners
 
 ---
 
@@ -31,102 +34,61 @@ Basic network protection for ads and trackers.
 
 Full home protection system.
 
-**Best for:**
+* Pi-hole (Tier 1)
+* Identity protection (Tier 3)
 
-* Most home users
-* Families
-* Smart home setups
-
-**What it does:**
-
-* Everything in Starter Shield
-* Stronger filtering rules
-* Better device-wide protection
+👉 Best balance of simplicity and security
 
 ---
 
-## 🟡 Business Essentials (Home Advanced Option)
+## 🟡 Business Essentials (Advanced Home Use)
 
-Light business-grade security for advanced home users.
+Small office-level protection (can also be used at home).
 
-**Best for:**
+* Network filtering
+* Identity protection
+* VPN + firewall
+* Network improvements
 
-* Tech-savvy home users
-* Home offices
-* Advanced network control
-
-**What it does:**
-
-* Enhanced filtering rules
-* More granular control options
+👉 For advanced home setups
 
 ---
 
-## 🟠 Pro Business Guard (Advanced Setup)
+## 🟠 Pro Business Guard
 
-High-level protection and monitoring features.
+Advanced visibility and monitoring.
 
-**Best for:**
+* Everything in Business Essentials
+* Monitoring dashboards (Tier 7)
 
-* Advanced users
-* Home labs
-* Security-focused setups
-
-**What it does:**
-
-* Monitoring tools
-* Advanced filtering logic
-* Security visibility features
+👉 For users who want insight into network activity
 
 ---
 
-## 🔴 Ultimate Offense (Maximum Protection)
+## 🔴 Ultimate Offense
 
-Full security system with maximum coverage.
+Maximum protection system.
 
-**Best for:**
+* All tiers (1–8)
+* Backup, monitoring, and threat detection
 
-* Power users
-* Smart home ecosystems
-* Maximum privacy setups
-
-**What it does:**
-
-* Full protection suite
-* Advanced detection logic
-* Maximum filtering coverage
+👉 For high-security environments
 
 ---
 
-# 🧠 Recommendation
+# ⚙️ Where to Go Next
 
-If you're not sure what to pick:
+👉 Select a package:
+/packages/
 
-👉 Start with **Privacy Plus**
-
-It is the most balanced and commonly used option.
-
----
-
-# ⚙️ How to Use This
-
-1. Choose a package above
-2. Open its folder in `/packages/`
-3. Follow the install instructions step-by-step
-4. Complete setup
+Then follow the install guide inside.
 
 ---
 
-# 🧭 Important Note
+# 🧠 Simple Rule
 
-All packages are compatible with home environments.
+If you're unsure:
 
-You are free to upgrade or change packages at any time.
+👉 Start with Privacy Plus
 
-No technical experience is required—just follow the guide.
-
----
-
-# 🚀 Next Step
-
-👉 Go to `/packages/` and select your chosen protection plan
+You can always upgrade later without reinstalling.
