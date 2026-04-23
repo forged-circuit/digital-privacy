@@ -1,123 +1,34 @@
-# 🏢 Business Users – Protection Plans (Small Office)
+# 🏢 Business Users (≤10 Users)
 
-This page is designed for small businesses (up to ~10 people).
-
-If you are managing a home office, small team, or local business network, these options will fit your needs.
-
-You do not need enterprise networking knowledge—just follow the setup guide for each package.
+This section is for small businesses, offices, and teams.
 
 ---
 
-# 🧭 Choose Your Protection Package
+# 🧭 Your Goal
 
-## 🟡 Business Essentials (Recommended Starting Point)
-
-Balanced protection for small business environments.
-
-**Best for:**
-
-* Offices up to 10 users
-* Home-based businesses
-* Shared work networks
-
-**What it does:**
-
-* Blocks ads and tracking across all devices
-* Provides consistent network-wide protection
-* Simple deployment and maintenance
-
-**Why choose this:**
-
-* Lowest complexity business option
-* Stable and easy to maintain
-* Works well as a foundation setup
+Secure your business network with stable protection, monitoring, and optional advanced security features.
 
 ---
 
-## 🟠 Pro Business Guard
+# 📦 Recommended Packages
 
-Enhanced monitoring and security controls.
-
-**Best for:**
-
-* Businesses that want visibility into network activity
-* Teams handling sensitive data
-* Users comfortable following structured technical steps
-
-**What it adds:**
-
-* Better monitoring of network traffic
-* Stronger filtering policies
-* More control over devices and access patterns
+* 🟡 Business Essentials → core business protection
+* 🟠 Pro Business Guard → adds monitoring dashboards
+* 🔴 Ultimate Offense → full protection + backup + detection
 
 ---
 
-## 🔴 Ultimate Offense
+# ⚙️ Where to Go Next
 
-Maximum protection for small business environments.
+👉 Choose a package:
+/packages/
 
-**Best for:**
-
-* High-security small businesses
-* Users who want full control and maximum filtering strength
-
-**What it adds:**
-
-* Strictest filtering ruleset
-* Advanced detection and protection layers
-* Designed for maximum security posture
+Then follow its install guide.
 
 ---
 
-# 🧠 How to Choose
+# 🧠 Recommendation
 
-If you're unsure:
+Most small businesses should start with:
 
-👉 Start with **Business Essentials**
-
-It is designed to be:
-
-* stable
-* simple to maintain
-* strong enough for most small offices
-
----
-
-# ⚙️ How Setup Works
-
-1. Select a package above
-2. Go to `/packages/`
-3. Follow the step-by-step installation guide
-4. Apply it to your network (router or DNS setup)
-5. Connect all business devices to the secured network
-
----
-
-# 🧭 Important Notes
-
-* This system is designed for small networks (≤10 users)
-* No dedicated IT team is required
-* You can upgrade packages later without rebuilding your setup
-* Works in both home-office and small business environments
-
----
-
-# 🚀 Recommended Path
-
-👉 Most users should start with **Business Essentials**
-
-Then upgrade only if needed based on:
-
-* network size
-* security requirements
-* visibility needs
-
----
-
-# 🧠 Final Note
-
-This system is intentionally designed to stay simple:
-
-> Strong protection without enterprise complexity
-
-If you can follow step-by-step instructions, you can deploy this system.
+👉 Business Essentials
