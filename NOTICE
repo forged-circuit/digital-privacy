@@ -1,0 +1,135 @@
+
+
+# NOTICE
+
+## Forged Circuit DNS Blocklists Project — Attribution Notice
+
+This project includes DNS filtering data and related assets developed under the DNS Blocklist System.
+
+All data contained in the following directories is subject to the terms of the `LICENSE-DATA` file:
+
+* `blocklist_levels/`
+* `whitelists/`
+* `tv/`
+
+---
+
+## ⚠️ Mandatory Attribution
+
+Any use, redistribution, or integration of this data **MUST include visible attribution**.
+
+Attribution must not be hidden, removed, or minimized.
+
+---
+
+## 📌 Required Attribution Format
+
+At minimum, attribution must include:
+
+* Project name or reference: DNS Blocklist System
+* Author attribution: Forged Circuit
+* Link to original repository (if applicable)
+
+---
+
+## 🧩 Where Attribution Must Appear
+
+If this data is used in any system, attribution MUST appear in at least one of the following:
+
+### 1. Documentation
+
+* README files
+* Technical documentation
+* Deployment guides
+
+### 2. User Interface (if applicable)
+
+* “About” page
+* Settings page
+* Footer or system info section
+
+### 3. API / SaaS / Hosted Services
+
+* Service credits page
+* System metadata endpoint
+* Dashboard attribution panel
+
+### 4. Containers / Distributed Software
+
+* Docker image labels or metadata
+* Container “about” command output
+* Startup banner or logs (if user-visible)
+
+---
+
+## 💼 Commercial Use Requirements
+
+If this project is used in:
+
+* Commercial software
+* Paid services
+* SaaS platforms
+* Enterprise deployments
+
+then attribution must be:
+
+* Visible to end users OR administrators
+* Not buried in source code alone
+* Not removed in white-label deployments
+
+---
+
+## 🚫 Prohibited Actions
+
+You may NOT:
+
+* Remove attribution from redistributed versions
+* Rebrand the data as your own
+* Hide attribution in compiled-only or inaccessible formats
+* Present the data as proprietary or original work
+
+---
+
+## 🔄 Modified Versions
+
+If you modify this data:
+
+* You must retain attribution
+* You must clearly indicate changes were made
+* You may not imply endorsement by the original author
+
+---
+
+## 🧠 Purpose of This Notice
+
+This NOTICE exists to ensure:
+
+* Proper credit is consistently visible
+* Commercial users do not strip attribution in production systems
+* Open-source contributions remain recognized
+
+---
+
+## 📄 Legal Alignment
+
+This NOTICE supplements but does not replace:
+
+* [`LICENSE-DATA`](LICENSE-DATA)
+* Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+In case of conflict, the terms of CC BY 4.0 take precedence.
+
+---
+
+## ⚖️ Summary
+
+If you use this project:
+
+✔ You must credit it
+✔ You must keep credit visible
+✔ You cannot hide attribution in production use
+✔ Commercial use is allowed with proper credit
+
+---
+
+End of NOTICE.
