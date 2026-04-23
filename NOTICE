@@ -1,16 +1,13 @@
-
-
 # NOTICE
 
-## Forged Circuit DNS Blocklists Project — Attribution Notice
+## Forged Circuit Digital Privacy System — Attribution Notice
 
-This project includes DNS filtering data and related assets developed under the DNS Blocklist System.
+This project includes DNS filtering data, configuration systems, and related assets developed under the Forged Circuit Digital Privacy System.
 
 All data contained in the following directories is subject to the terms of the `LICENSE-DATA` file:
 
-* `blocklist_levels/`
-* `whitelists/`
-* `tv/`
+* `filters/`
+* `packages/`
 
 ---
 
@@ -26,7 +23,7 @@ Attribution must not be hidden, removed, or minimized.
 
 At minimum, attribution must include:
 
-* Project name or reference: DNS Blocklist System
+* Project name: Forged Circuit Digital Privacy System
 * Author attribution: Forged Circuit
 * Link to original repository (if applicable)
 
@@ -41,18 +38,20 @@ If this data is used in any system, attribution MUST appear in at least one of t
 * README files
 * Technical documentation
 * Deployment guides
+* Protection plan guides (`protection-plans/`)
 
 ### 2. User Interface (if applicable)
 
 * “About” page
 * Settings page
 * Footer or system info section
+* Dashboard attribution panel
 
 ### 3. API / SaaS / Hosted Services
 
 * Service credits page
 * System metadata endpoint
-* Dashboard attribution panel
+* Dashboard or control panel
 
 ### 4. Containers / Distributed Software
 
@@ -114,7 +113,7 @@ This NOTICE exists to ensure:
 
 This NOTICE supplements but does not replace:
 
-* [`LICENSE-DATA`](LICENSE-DATA)
+* `LICENSE-DATA`
 * Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 In case of conflict, the terms of CC BY 4.0 take precedence.
@@ -125,10 +124,10 @@ In case of conflict, the terms of CC BY 4.0 take precedence.
 
 If you use this project:
 
-✔ You must credit it
-✔ You must keep credit visible
-✔ You cannot hide attribution in production use
-✔ Commercial use is allowed with proper credit
+✔ You must credit it  
+✔ You must keep credit visible  
+✔ You cannot hide attribution in production use  
+✔ Commercial use is allowed with proper credit  
 
 ---
 
