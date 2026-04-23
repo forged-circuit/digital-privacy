@@ -1,22 +1,26 @@
 # LICENSE-DATA
 
-## DNS Blocklist System — Data License
+## Digital Privacy Protection System — Data License
 
 Copyright (c) 2026
 
-This license applies to all data files within this repository, including but not limited to:
+This license applies to all data and configuration files within this repository, including but not limited to:
 
-* `blocklist_levels/`
-* `whitelists/`
-* `tv/`
+* `filters/blocklist/main/`
+* `filters/blocklist/tv/`
+* `filters/whitelists/main/`
+* `filters/whitelists/tv/`
+* Any structured protection configurations within `packages/`
 
 ---
 
 ## 1. Definitions
 
-**“Data”** refers to all domain lists, including blocklists and whitelists contained in this repository.
+**“Data”** refers to all domain lists, filtering rules, and protection configurations contained in this repository.
 
-**“You”** refers to any individual or entity using, copying, modifying, or distributing the Data.
+**“System”** refers to the Digital Privacy Protection System, including blocklists, whitelists, and package-based protection plans.
+
+**“You”** refers to any individual or entity using, copying, modifying, or distributing the Data or System.
 
 ---
 
@@ -38,7 +42,7 @@ Attribution must:
 
 ### Examples of acceptable attribution:
 
-* “Includes data from the DNS Blocklist System project”
+* “Includes data from the Digital Privacy Protection System”
 * A link in a README or documentation page
 * A visible credit within a UI or dashboard
 
@@ -55,7 +59,7 @@ Commercial use of the Data is permitted, including within:
 * Managed services
 * Enterprise environments
 
-**Provided that all license conditions are met**, including attribution.
+Provided that all license conditions are met, including attribution.
 
 ---
 
@@ -66,7 +70,7 @@ You may NOT:
 * Remove or obscure attribution
 * Redistribute the Data as a standalone product without clear attribution
 * Sell the Data alone without substantial modification or added value
-* Misrepresent the origin or authorship of the Data
+* Misrepresent the origin or authorship of the Data or System
 
 ---
 
@@ -113,9 +117,9 @@ In no event shall the author be liable for any claim, damages, or other liabilit
 
 ## 10. Visibility Request (Non-Binding)
 
-If you use this Data in a commercial product or service, you are **strongly encouraged** to notify the maintainer.
+If you use this Data in a commercial product or service, you are strongly encouraged to notify the maintainer.
 
-This is a request for transparency and community awareness and is **not a legal requirement**.
+This is a request for transparency and community awareness and is not a legal requirement.
 
 ---
 
