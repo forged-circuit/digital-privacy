@@ -1,232 +1,187 @@
 # Forged Circuit DNS Blocklist System
 
-A structured, multi-level DNS blocklist and whitelist system designed for **scalable privacy, usability, and control** across home networks and devices.
+A structured digital privacy system designed to help users protect their home network from ads, trackers, and unwanted connections.
 
-Built for use with Pi-hole, OPNsense, AdGuard Home, and other DNS filtering solutions.
-
----
-
-## 🏷️ Project Identity
-
-**Project:** DNS Blocklist System  
-**Maintainer:** Forged Circuit  
-**License:** Dual-license (Code + Data)  
-
-Source: https://github.com/<your-repo-link>
+Built for use with:
+- Pi-hole
+- OPNsense
+- AdGuard Home
+- Other DNS filtering systems
 
 ---
 
-## 🧠 Overview
+# 🧭 What This Project Is
 
-Most blocklists are either:
+This system is designed for real-world home users who want:
 
-* Too weak → ads and trackers still get through
-* Too aggressive → everything breaks
+- Simple setup options
+- Scalable protection levels
+- Control over what gets blocked
+- A way to improve privacy over time
 
-This project introduces a **progressive level system** that allows you to:
-
-* Start light
-* Increase protection gradually
-* Maintain functionality using matching whitelists
+You do NOT need to understand networking to use it.
 
 ---
 
-## 🚀 Features
+# 🧩 How This System Is Organized
 
-* 🔢 **7-Level Blocklist System** → [`blocklist_levels/`](blocklist_levels/)
-* ✅ **Matching Whitelists** → [`whitelists/`](whitelists/)
-* 📺 **Dedicated TV / Streaming Lists** → [`tv/`](tv/)
-* 🧩 Built for **real-world usability**
-* 🔒 Focused on **privacy without unnecessary breakage**
+This project is split into two simple parts:
 
----
+## 1. Protection Plans (What you choose)
 
-## 🔢 Level System
+Located in:
+/protection-plans/
 
-Each level builds on the previous one.
+These are beginner-friendly guides that help you decide what level of protection you need:
 
-| Level   | Description                                   |
-| ------- | --------------------------------------------- |
-| Level 1 | Minimal blocking (testing / baseline)         |
-| Level 2 | Light ad + tracker blocking                   |
-| Level 3 | Balanced default (recommended starting point) |
-| Level 4 | Strong privacy with minor breakage            |
-| Level 5 | Aggressive tracking + telemetry blocking      |
-| Level 6 | Advanced / power-user level                   |
-| Level 7 | Maximum / paranoid mode                       |
+- Home Users
+- Pro Users
+- Business Users
 
-👉 See real-world setups:
-**[`USE-CASES.md`](USE-CASES.md)**
+Each guide tells you exactly where to start.
 
 ---
 
-## 🧩 How It Works
+## 2. Packages (What you install)
 
-### Blocklists
+Located in:
+/packages/
 
-Located in: [`blocklist_levels/`](blocklist_levels/)
+These are the actual installable configurations:
 
-* Each level increases coverage and strictness
-* Higher levels = more aggressive blocking
+- Starter Shield
+- Privacy Plus
+- Business Essentials
+- Pro Business Guard
+- Ultimate Offense
 
----
-
-### Whitelists
-
-Located in: [`whitelists/`](whitelists/)
-
-* Restore functionality broken by blocking
-* Must be used alongside blocklists
-* Follow the same level structure
+Each package contains setup instructions and DNS lists.
 
 ---
 
-### 📺 TV / Streaming Lists
+# 🔒 Protection Levels (Behind the Scenes)
 
-Located in: [`tv/`](tv/)
+Each package uses a structured level system:
 
-* Designed specifically for smart TVs and streaming devices
-* Prevents breaking apps like Netflix, Hulu, etc.
-* Allows required ad/telemetry endpoints for playback
+| Level | Description |
+|------|------------|
+| Level 1 | Minimal filtering (baseline) |
+| Level 2 | Light ad + tracker blocking |
+| Level 3 | Balanced protection (recommended) |
+| Level 4 | Strong privacy protection |
+| Level 5 | Advanced blocking |
+| Level 6 | Power-user configuration |
+| Level 7 | Maximum protection mode |
 
----
-
-## 🧱 Project Structure
-
-```bash
-.github/
-
-blocklist_levels/
-  level1.txt
-  level2.txt
-  level3.txt
-  level4.txt
-  level5.txt
-  level6.txt
-  level7.txt
-
-whitelists/
-  whitelist-lvl1.txt
-  whitelist-lvl2.txt
-  whitelist-lvl3.txt
-  whitelist-lvl4.txt
-
-tv/
-  tv-level1.txt
-  tv-level2.txt
-  tv-level3.txt
-
-docs/
-  architecture.md
-  licensing.md
-
-scripts/
-  update_blocklists.py
-
-CONTRIBUTING.md
-CHANGELOG.md
-DISCLAIMER.md
-USE-CASES.md
-LICENSE
-LICENSE-DATA
-NOTICE
-README.md
-```
+> Higher levels provide stronger privacy but may require additional whitelist tuning.
 
 ---
 
-## ⚙️ Usage
+# 🧩 Key Features
 
-### Basic Setup
-
-1. Choose a level from [`blocklist_levels/`](blocklist_levels/)
-2. Add the list to your DNS system (Pi-hole, OPNsense, etc.)
-3. Add the corresponding whitelist from [`whitelists/`](whitelists/)
-4. Test your environment
-5. Increase level as needed
+- 7-level DNS filtering system
+- Matching whitelist system to restore broken services
+- Dedicated TV / streaming protection lists
+- Compatible with major DNS platforms
+- Gradual upgrade path from simple → advanced protection
 
 ---
 
-### Recommended Strategy
+# 📺 TV / Streaming Support
 
-* Start at Level 2 or 3
-* Monitor logs
-* Increase gradually
-* Add custom whitelist entries when needed
+Located in:
+/tv/
 
-👉 See examples:
-**[`USE-CASES.md`](USE-CASES.md)**
+These lists are designed specifically for smart TVs and streaming devices.
 
----
-
-## 📚 Documentation
-
-### Core Docs
-
-* 🧠 System Architecture → [`docs/architecture.md`](docs/architecture.md)
-* ⚖️ Licensing Details → [`docs/licensing.md`](docs/licensing.md)
-
-### Project Files
-
-* 🤝 Contributing → [`CONTRIBUTING.md`](CONTRIBUTING.md)
-* 📜 Changelog → [`CHANGELOG.md`](CHANGELOG.md)
-* ⚠️ Disclaimer → [`DISCLAIMER.md`](DISCLAIMER.md)
-* 🧩 Use Cases → [`USE-CASES.md`](USE-CASES.md)
+They help prevent:
+- Streaming service breakage
+- App login issues
+- Playback interruptions
 
 ---
 
-## 🤝 Contributing
+# ⚙️ How to Use
 
-Contributions are welcome, but must follow project structure and quality standards.
+## Step 1: Choose a Protection Plan
+Go to:
+/protection-plans/
 
-👉 Read before submitting:
-**[`CONTRIBUTING.md`](CONTRIBUTING.md)**
-
----
-
-## ⚠️ Disclaimer
-
-This project may break certain websites, apps, or devices depending on the level used.
-
-Use at your own risk.
-
-👉 Full disclaimer:
-**[`DISCLAIMER.md`](DISCLAIMER.md)**
+Pick:
+- Home User
+- Pro User
+- Business
 
 ---
 
-## 📜 Changelog
+## Step 2: Select a Package
 
-Track all updates and changes here:
-**[`CHANGELOG.md`](CHANGELOG.md)**
+Choose a package:
 
----
-
-## ⚖️ Licensing
-
-This project uses a dual-license approach:
-
-* Code → **[`LICENSE`](LICENSE)**
-* Data (blocklists/whitelists) → **[`LICENSE-DATA`](LICENSE-DATA)**
-
-Additional details:
-👉 **[`docs/licensing.md`](docs/licensing.md)**
+- Starter Shield (basic protection)
+- Privacy Plus (recommended home setup)
+- Business Essentials (small business)
+- Pro Business Guard (advanced monitoring)
+- Ultimate Offense (full protection suite)
 
 ---
 
-## 📄 Notice
+## Step 3: Install
 
-See:
-**[`NOTICE`](NOTICE)**
+Each package contains step-by-step instructions.
 
 ---
 
-## 🧠 Final Notes
+## Step 4: Add to DNS System
 
-This project is designed to be:
+Use with:
+- Pi-hole
+- OPNsense
+- AdGuard Home
 
-* Practical for real-world networks
-* Flexible across different environments
-* Structured for long-term maintainability
+---
 
-Start simple. Increase gradually. Stay in control.
+# 📚 Documentation
+
+- Architecture → `/docs/architecture.md`
+- Licensing → `/docs/licensing.md`
+- Use Cases → `/USE-CASES.md`
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome but must follow project structure and maintain usability for non-technical users.
+
+See: `CONTRIBUTING.md`
+
+---
+
+# ⚠️ Disclaimer
+
+This system may block websites, services, or applications depending on the selected protection level.
+
+Use at your own discretion.
+
+See: `DISCLAIMER.md`
+
+---
+
+# 📜 License
+
+This project uses a dual-license model:
+
+- Code → `LICENSE`
+- Data (blocklists/whitelists) → `LICENSE-DATA`
+
+---
+
+# 🧠 Final Note
+
+This system is designed to be:
+
+- Easy for beginners
+- Scalable for advanced users
+- Practical for real home networks
+
+Start simple. Upgrade when needed. Stay in control.
