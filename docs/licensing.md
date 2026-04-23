@@ -1,118 +1,116 @@
 # Forged Circuit Licensing Overview
-# Licensing
 
-This project uses a **dual-license structure** to separate code and data.
+## 🧾 Licensing Model
 
----
-
-## 🧾 Overview
-
-| Component                     | License                                  |
-| ----------------------------- | ---------------------------------------- |
-| Code (scripts, tooling)       | See [`../LICENSE`](../LICENSE)           |
-| Data (blocklists, whitelists) | See [`../LICENSE-DATA`](../LICENSE-DATA) |
+This project uses a **dual-license structure** to separate system code from data assets.
 
 ---
 
-## 🧠 Why Dual Licensing?
+## 🧠 Overview
 
-Blocklists are **curated datasets**, not just code.
-
-They require:
-
-* Ongoing maintenance
-* Real-world testing
-* Continuous refinement
-
-This license structure ensures:
-
-* Open access for individuals
-* Proper attribution
-* Visibility into commercial usage
+| Component                              | License               |
+| -------------------------------------- | --------------------- |
+| Code (scripts, automation, tooling)    | See `../LICENSE`      |
+| Data (filters, blocklists, whitelists) | See `../LICENSE-DATA` |
 
 ---
 
-## 📊 Data License (Blocklists & Whitelists)
+## 🧭 System Context
+
+This project is structured as a **digital protection system**, organized into:
+
+* **Protection Plans** (user entry points)
+* **Packages** (installable configurations)
+* **Filters** (blocklists & whitelists)
+
+Licensing applies across all components unless otherwise stated.
+
+---
+
+## 📊 Data License (Filters)
 
 All files within:
 
-* `blocklist_levels/`
-* `whitelists/`
-* `tv/`
+```
+filters/blocklist/main/
+filters/blocklist/tv/
+filters/whitelists/main/
+filters/whitelists/tv/
+```
 
-are covered under **LICENSE-DATA**.
+are covered under `LICENSE-DATA`.
+
+These files are considered **curated security datasets**, not generic code.
 
 ---
 
 ## ⚖️ Attribution Requirement
 
-**Attribution is REQUIRED in all cases.**
+Attribution is REQUIRED in all cases.
 
 If you use, modify, or distribute this project’s data, you must:
 
-* Include a visible reference to this project
+* Include visible attribution to this project
 * Provide a link to the original repository
-* Retain this licensing structure
+* Retain licensing structure in derived works
 
-### Acceptable Attribution Examples
+---
 
-* In documentation:
+## ✅ Acceptable Attribution Examples
 
-  > “Includes data from this project”
+**Documentation:**
 
-* In UI / dashboards:
+> “Includes filtering data from Forged Circuit”
 
-  > “Blocklist powered by this project”
+**UI / Dashboard:**
 
-* In code repositories:
+> “Protection powered by Forged Circuit filters”
 
-  * Link in README
-  * Credit in documentation
+**Repositories:**
+
+* Link in README
+* Credit in documentation
 
 ---
 
 ## 💼 Commercial Use
 
-Commercial use is **allowed**, but with conditions.
+Commercial use is allowed under the following conditions:
 
-If you use this project in:
+If used in:
 
 * Paid products
 * Managed services
 * SaaS platforms
-* Enterprise environments
+* Enterprise deployments
 
-You MUST:
+You must:
 
 ### 1. Provide Attribution
 
-Visible and accessible to users (not hidden)
-
-### 2. Notify the Maintainer
-
-You are required to provide notice of commercial use.
-
-### 3. Do Not Misrepresent Ownership
-
-You may not:
-
-* Claim the data as your own
-* Rebrand without attribution
-* Remove credit
+Attribution must be visible to end users.
 
 ---
 
-## 📣 Notification Requirement
+### 2. Maintain Transparency
 
-If this project is used commercially, you must notify the maintainer.
+You may not:
 
-Include:
+* Remove attribution
+* Rebrand as your own system
+* Hide origin of data
 
-* Name of product/service
+---
+
+### 3. Notify Maintainer
+
+Commercial usage must be disclosed to the maintainer including:
+
+* Product or service name
 * General use case
-* (Optional) scale of deployment
+* Scale (optional)
 
-This is **not a permission request**, but a visibility requirement.
+This is for visibility, not permission.
 
 ---
 
@@ -120,10 +118,10 @@ This is **not a permission request**, but a visibility requirement.
 
 You may NOT:
 
+* Sell raw blocklists as a standalone product
 * Remove attribution
-* Redistribute as a standalone product without credit
-* Sell the data alone without significant modification or added value
 * Misrepresent authorship
+* Redistribute as a competing dataset without modification or added value
 
 ---
 
@@ -132,95 +130,45 @@ You may NOT:
 You ARE allowed to:
 
 * Modify lists
-* Combine with other sources
-* Redistribute as part of a larger system
+* Combine with other filtering sources
+* Use in larger systems or products
 
 But you MUST:
 
-* Keep attribution
-* Document changes if redistributed
-* Maintain transparency
+* Retain attribution
+* Document significant changes if redistributed
+* Maintain transparency of origin
 
 ---
 
-## 🛡️ Enforcement Philosophy
+## 🧠 Licensing Philosophy
 
-This project is open, but not anonymous.
+This project is:
+
+* Open for personal and commercial use
+* Designed for real-world deployment
+* Structured for attribution, not restriction
 
 The goal is:
 
-* Encourage use
-* Maintain credit
-* Ensure visibility in commercial environments
+> Enable adoption while preserving credit and transparency.
 
 ---
 
-## 📄 Legal Reference
+## 📄 Legal References
 
-For full legal terms, see:
-
-* Code License → [`../LICENSE`](../LICENSE)
-* Data License → [`../LICENSE-DATA`](../LICENSE-DATA)
-* Notice File → [`../NOTICE`](../NOTICE)
+* Code License → `../LICENSE`
+* Data License → `../LICENSE-DATA`
+* Notice → `../NOTICE`
 
 ---
 
 ## 🧠 Summary
 
-* Free for personal and commercial use
+* Code is licensed under MIT
+* Data is licensed under CC BY 4.0
 * Attribution is mandatory
-* Commercial usage must be visible
-* Notification is required
-* Misrepresentation is prohibited
-
----
+* Commercial use is allowed with visibility requirements
+* Transparency is required in all derivatives
 
 By using this project, you agree to these terms.
-
-Forged Circuit uses a dual-license model.
-
----
-
-## Code (MIT)
-
-Applies to:
-
-* scripts/
-* automation
-* workflows
-
----
-
-## Data (CC BY 4.0)
-
-Applies to:
-
-* blocklists
-* whitelists
-* TV lists
-
----
-
-## Why This Model?
-
-* MIT → maximum usability for code
-* CC BY → ensures attribution for data
-
----
-
-## Commercial Use
-
-Allowed under both licenses.
-
-Requirement:
-
-* Attribution must be preserved
-
----
-
-## Summary
-
-| Type | License   |
-| ---- | --------- |
-| Code | MIT       |
-| Data | CC BY 4.0 |
