@@ -59,14 +59,23 @@ Choose this if you are setting this up for a business, office, or multiple emplo
 You can select ANY package below regardless of user type:
 
 🟢 Basic Protection
+
 Starter Shield
+
 🔵 Full Home Protection
+
 Privacy Plus
+
 🟡 Business Essentials
+
 Business Essentials
+
 🟠 Advanced Business Security
+
 Pro Business Guard
+
 🔴 Maximum Security
+
 Ultimate Offense
 
 ### Business perferred
