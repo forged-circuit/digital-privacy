@@ -1,133 +1,132 @@
-# 🟢 Starter Shield – Installation Guide
+# 🟢 Starter Shield — Installation Guide
 
-Starter Shield is your basic network protection package.
+Starter Shield provides basic network-wide protection using Pi-hole.
 
-It is built from:
-
-* **Tier 1 → Pi-hole (core ad & tracker blocking)**
-* **Optional Tier 2a → Home Assistance (network setup & security guidance)**
-* **OR Tier 2b → Personal Password Manager (Vaultwarden)**
-
-You can choose one optional add-on based on your needs.
+This setup blocks ads and trackers across all devices on your network.
 
 ---
 
-# 🧭 Before You Begin
+# 🧭 Overview
 
-You will need:
+You will:
 
+1. Install Pi-hole
+2. Import a pre-configured setup
+3. Update blocklists
+4. Connect your network
+
+No manual configuration required.
+
+---
+
+# ⚙️ Requirements
+
+* A device to run Pi-hole (Raspberry Pi or similar)
 * Access to your router settings
-* A device for setup (computer or laptop recommended)
-* 15–30 minutes of setup time
+* A computer or phone for setup
 
 ---
 
-# ⚙️ Step 1: Install Tier 1 – Pi-hole (Required)
+# 🧩 Step 1: Install Pi-hole
 
-This is the core of your system.
+Install Pi-hole on your device using the official installer.
 
-### What you will do:
+👉 https://pi-hole.net
 
-* Install Pi-hole on a Raspberry Pi or small device
-* Set your router DNS to Pi-hole
-* Enable network-wide ad blocking
-
-### Result:
-
-✔ Ads and trackers are blocked across your entire network
+Follow the default installation steps.
 
 ---
 
-# ⚙️ Step 2: Choose Your Optional Add-On
+# 📥 Step 2: Import Baseline Configuration
 
-Starter Shield allows ONE optional upgrade.
+This step applies a ready-to-use setup.
 
----
+1. Open Pi-hole admin panel
+   (example: http://pi.hole/admin)
 
-## 🟡 Option A: Tier 2a – Home Assistance
+2. Go to:
+   Settings → Teleporter
 
-Choose this if you want better control and guidance for your home network.
+3. Upload the file:
 
-### What it adds:
+👉 `/configs/pihole/baseline/pihole-baseline-v1.tar.gz`
 
-* Basic router security improvements
-* Device visibility guidance
-* Safer default network configuration
+4. Click Restore
 
-✔ Best for general home users
-
----
-
-## 🔐 Option B: Tier 2b – Personal Password Manager
-
-Choose this if you want stronger account security.
-
-### What it adds:
-
-* Vaultwarden password manager setup
-* Secure storage for all passwords
-* Protection against password reuse
-
-✔ Best for users focused on account security
+5. Wait for Pi-hole to restart
 
 ---
 
-# 🧠 Step 3: Verify Your Setup
+# 🔄 Step 3: Update Blocklists
 
-After installation:
+1. In Pi-hole, go to:
+   Tools → Update Gravity
 
-* Open a website with ads
-* Confirm ads are reduced or blocked
-* Ensure internet is working normally
+2. Click:
+
+👉 Update
+
+3. Wait for completion
 
 ---
 
-# 🧠 What You Just Installed
+# 🌐 Step 4: Connect Your Network
 
-Starter Shield gives you:
+Set your router to use Pi-hole for DNS.
 
-* Network-wide ad blocking (Tier 1)
-* Optional home security guidance (Tier 2a)
-  **OR**
-* Optional password security system (Tier 2b)
+1. Log into your router
+2. Find DNS settings
+3. Set DNS server to your Pi-hole IP address
+4. Save and restart router
+
+---
+
+# 📱 Step 5: Restart Devices
+
+* Restart phones, computers, and TVs
+* Reconnect to Wi-Fi
+
+---
+
+# ✅ Expected Result
+
+After setup:
+
+* Ads are blocked across your network
+* Tracking domains are filtered
+* No software is required on individual devices
+
+---
+
+# 🧠 Optional Add-On
+
+Starter Shield includes one optional upgrade:
+
+* Home network setup (Tier 2a)
+* OR password manager (Tier 2b)
+
+You can add these later at any time.
 
 ---
 
 # ⚠️ Important Notes
 
-* You only choose ONE optional add-on in Starter Shield
-* You can upgrade later without starting over
-* Pi-hole is always required for this package
+* Do not change Pi-hole settings unless instructed
+* Allow a few minutes for changes to apply
+* Some apps may require a restart to reflect filtering
 
 ---
 
-# 🧭 When to Use Starter Shield
+# 🧭 Need More Protection?
 
-Choose this if you want:
+You can upgrade anytime:
 
-* Simple ad blocking for your home
-* A lightweight introduction to network protection
-* Optional upgrade into security or password management
+👉 Privacy Plus
 
----
-
-# 🚀 Next Step Options
-
-After installation, you can:
-
-* Stay on Starter Shield (basic protection)
-* Upgrade to Privacy Plus (recommended full setup)
-* Or expand into business-level packages
-
-👉 View all options in `/packages/`
+Adds identity protection and deeper network security.
 
 ---
 
-# 🧠 Summary
+# 🎉 Setup Complete
 
-Starter Shield includes:
-
-* Tier 1 → Pi-hole (required)
-* Tier 2a OR Tier 2b (optional add-on)
-
-It is your simplest and fastest entry into network protection.
+Your network is now protected with Starter Shield.
