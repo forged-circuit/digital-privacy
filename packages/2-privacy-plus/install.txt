@@ -1,10 +1,11 @@
 # 🔵 Privacy Plus – Installation Guide
 
-Privacy Plus is the recommended full home protection setup.
+Privacy Plus is a tier-based protection package built from:
 
-It improves Starter Shield by adding stronger filtering, better device coverage, and more consistent network protection.
+* **Tier 1 → Pi-hole (network-wide ad & tracker blocking)**
+* **Tier 3 → Combined Home + Password Manager (identity protection layer)**
 
-This guide is designed to be simple and step-by-step.
+This guide installs both tiers in order.
 
 ---
 
@@ -13,115 +14,118 @@ This guide is designed to be simple and step-by-step.
 You will need:
 
 * Access to your router settings
-* A device connected to your Wi-Fi
-* About 15–20 minutes
-* Starter Shield is NOT required (this can be installed fresh)
+* One device for setup (computer or laptop recommended)
+* 20–40 minutes of setup time
+* Ability to restart your network
 
 ---
 
-# ⚙️ Step 1: Access Your Router
+# ⚙️ Step 1: Install Tier 1 – Pi-hole
 
-* Open a web browser
-* Enter your router address (usually `192.168.1.1` or `192.168.0.1`)
-* Log in with your admin username/password
+This is your core network protection layer.
 
----
+### What you will do:
 
-# ⚙️ Step 2: Set Network Protection (DNS)
+* Install Pi-hole on a Raspberry Pi or small server
+* Configure your router to use Pi-hole as DNS
+* Apply network-wide filtering
 
-Privacy Plus works by directing your internet traffic through a protected filtering system.
+### Result:
 
-You will update your DNS settings:
-
-* Go to “Internet” or “Network Settings”
-* Find “DNS Settings”
-* Replace existing DNS with your Privacy Plus configuration
-
-Save your changes.
+✔ Ads and trackers are blocked across all devices on your network
 
 ---
 
-# ⚙️ Step 3: Restart Your Network
+# ⚙️ Step 2: Verify Tier 1 is Working
 
-To apply changes:
+Before moving forward, confirm:
 
-* Restart your router
-* Wait 1–2 minutes for internet to reconnect
+* Websites load normally
+* Ads are reduced or removed
+* Devices are connected to the network
 
----
-
-# ⚙️ Step 4: Reconnect Your Devices
-
-Once your network is back online:
-
-* Reconnect phones, laptops, TVs, and smart devices
-* Or restart devices if they do not connect automatically
-
-Privacy Plus will now apply across all devices.
+If everything looks good, continue.
 
 ---
 
-# 🧪 Step 5: Confirm Protection is Active
+# ⚙️ Step 3: Install Tier 3 – Identity Protection Layer
 
-Open a browser and visit normal websites.
+Now you will add secure password and identity management.
 
-You should notice:
+### What you will do:
 
-* Fewer ads
-* Faster loading pages
-* Reduced tracking content
-* Cleaner browsing experience
+* Install Vaultwarden (self-hosted password manager)
+* Create your secure vault
+* Add your accounts and credentials
+
+### Result:
+
+✔ All passwords are stored securely in your own system
+✔ No more password reuse across services
 
 ---
 
-# 🧠 What Privacy Plus Adds
+# ⚙️ Step 4: Connect Both Layers
 
-Compared to Starter Shield, you now get:
+Privacy Plus works by combining:
 
-* Stronger filtering rules
-* Better coverage across devices
-* More consistent blocking behavior
-* Improved stability for smart home devices
+* Network protection (Pi-hole)
+* Identity protection (Vaultwarden)
+
+At this stage:
+
+* Your devices are protected from tracking
+* Your accounts are secured with strong password management
+
+---
+
+# 🧠 What You Just Built
+
+Privacy Plus gives you:
+
+* Full network-wide ad and tracker blocking
+* Secure self-hosted password vault
+* Protection across all home devices
+* A foundation for advanced upgrades later
 
 ---
 
 # ⚠️ Important Notes
 
-* Some ads may still appear inside apps (this is normal)
-* Certain streaming services may behave slightly differently
-* Changes may take a few minutes to fully apply
-
-If something seems off, restarting your router usually fixes it.
+* Pi-hole handles network filtering (Tier 1)
+* Vaultwarden handles credentials (Tier 3)
+* These systems are independent but work together
+* You can upgrade or expand later without reinstalling
 
 ---
 
 # 🧭 When to Use Privacy Plus
 
-Use this if you want:
+Choose this if you want:
 
-* Stronger protection than basic setup
-* Better control over network privacy
-* A stable “set it and forget it” system
+* Strong home privacy protection
+* Secure password management
+* A balanced, long-term setup
 
 ---
 
-# 🚀 What’s Next?
+# 🚀 Next Step Options
 
-Once Privacy Plus is installed, you can:
+After installation, you can:
 
-* Keep it as-is (most users do)
-* Upgrade to Business Essentials for more control
-* Or explore advanced protection packages
+* Keep this as your full setup (most users do)
+* Upgrade to Business Essentials (adds VPN + infrastructure layers)
+* Or expand into advanced tiers later
 
-👉 View all options in `/packages/`
+👉 View all packages in `/packages/`
 
 ---
 
 # 🧠 Summary
 
-Privacy Plus gives you:
+Privacy Plus combines:
 
-* Full home network protection
-* Stronger ad and tracker blocking
-* Simple setup process
-* Reliable everyday performance
+* Tier 1 → Network protection (Pi-hole)
+* Tier 3 → Identity protection (Vaultwarden)
+
+Together they form a complete home privacy system.
