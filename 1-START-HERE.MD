@@ -20,9 +20,17 @@ Choose this if you are setting this up for a home, family, or personal devices.
 
 ### Options:
 
-* 🟢 Home Users → Simple setup, basic protection
-* 🔵 Pro Users → Advanced protection and full network control
+🏠 Home Users
 
+For personal use, families, and home networks.
+
+You will see all available protection options, with simple recommendations.
+
+🔧 Pro Users
+
+For advanced users who want more control and deeper configuration understanding.
+
+You will also see all available protection options, with technical detail included.
 👉 Start here:
 `/protection-plans/home-users.md`
 
@@ -44,19 +52,20 @@ Choose this if you are setting this up for a business, office, or multiple emplo
 
 # 🧩 Step 2: Pick a Package
 
-Once you choose your path, you will select a package:
+You can select ANY package below regardless of user type:
 
-### Home Users
+🟢 Basic Protection
+Starter Shield
+🔵 Full Home Protection
+Privacy Plus
+🟡 Business Essentials
+Business Essentials
+🟠 Advanced Business Security
+Pro Business Guard
+🔴 Maximum Security
+Ultimate Offense
 
-* Starter Shield → Basic protection
-* Privacy Plus → Full home protection
-
-### Pro Users
-
-* Home Protection Suite
-* Advanced Home Security
-
-### Business
+### Business perferred
 
 * Business Essentials
 * Pro Business Guard
