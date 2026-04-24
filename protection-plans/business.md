@@ -1,34 +1,90 @@
-# 🏢 Business Users (≤10 Users)
+# 🏢 Business (Up to ~10 Users)
 
-This section is for small businesses, offices, and teams.
+This path is designed for small offices and home businesses.
 
----
+Focus:
 
-# 🧭 Your Goal
-
-Secure your business network with stable protection, monitoring, and optional advanced security features.
-
----
-
-# 📦 Recommended Packages
-
-* 🟡 Business Essentials → core business protection
-* 🟠 Pro Business Guard → adds monitoring dashboards
-* 🔴 Ultimate Offense → full protection + backup + detection
+* stability
+* security
+* simplicity
 
 ---
 
-# ⚙️ Where to Go Next
+# 🧭 Recommended Starting Point
 
-👉 Choose a package:
-/packages/
+👉 **Business Essentials**
 
-Then follow its install guide.
+Provides the core infrastructure needed for a business environment.
 
 ---
 
-# 🧠 Recommendation
+# 📦 Available Packages
 
-Most small businesses should start with:
+---
 
-👉 Business Essentials
+## 🟡 Business Essentials (Recommended)
+
+Core business protection.
+
+* Firewall (Protectli)
+* VLAN network segmentation
+* VPN access
+* Managed switch + WiFi
+
+👉 Best for:
+
+* small teams
+* basic office environments
+
+---
+
+## 🟠 Pro Business Guard
+
+Adds visibility.
+
+* Monitoring-ready system
+* Better insight into network activity
+
+👉 Best for:
+
+* growing teams
+* environments needing oversight
+
+---
+
+## 🔴 Ultimate Offense
+
+Maximum protection.
+
+* Backup systems
+* Threat detection (honeypot)
+
+👉 Best for:
+
+* sensitive environments
+* higher security needs
+
+---
+
+# 🧠 How to Choose
+
+* Start with **Business Essentials**
+* Upgrade if you need visibility or detection
+
+---
+
+# ⚠️ Important
+
+This system is designed for:
+
+👉 up to ~10 users
+
+For larger environments, custom configuration is recommended.
+
+---
+
+# 🚀 Next Step
+
+Go to:
+
+👉 `/packages/`
