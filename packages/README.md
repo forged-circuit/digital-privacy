@@ -1,99 +1,131 @@
 # 📦 Protection Packages
 
-This is the full list of available protection packages.
+Choose a protection level based on your needs.
 
-Each package installs a different level of privacy and network protection.
-
-You can choose any package at any time.
-
-If you're unsure, start with **Privacy Plus**.
+Each package builds on top of the previous one.
 
 ---
 
-# 🧭 Choose Your Package
+# 🧭 How This Works
 
-## 🟢 Starter Shield
+* Pick a package
+* Follow its install guide
+* Your system becomes fully configured
 
-Basic protection for ads and tracking.
-
-* Simple setup
-* Lightweight filtering
-* Best for basic home use
-
-👉 Good starting point for first-time users
+You can upgrade at any time.
 
 ---
 
-## 🔵 Privacy Plus (Recommended)
+# 🟢 1. Starter Shield
 
-Full home protection system.
+Basic protection for your network.
 
-* Strong filtering across all devices
-* Balanced performance and protection
-* Works with most home networks
+Includes:
 
-👉 Recommended for most users
+* Pi-hole (ad + tracker blocking)
+* One add-on:
 
----
+  * Home Assistant (network awareness)
+    OR
+  * Vaultwarden (password security)
 
-## 🟡 Business Essentials
+👉 Best for:
 
-Light business-grade protection for small environments.
-
-* Designed for small offices or home businesses
-* Network-wide filtering
-* Stable and easy to maintain
+* first-time users
+* simple home setups
 
 ---
 
-## 🟠 Pro Business Guard
+# 🔵 2. Privacy Plus (Recommended)
 
-Advanced protection with more control and visibility.
+Full home privacy system.
 
-* Enhanced security filtering
-* Better monitoring capability
-* Suitable for advanced users
+Includes:
 
----
+* Pi-hole
+* Home Assistant
+* Vaultwarden
 
-## 🔴 Ultimate Offense
+👉 Best for:
 
-Maximum protection level.
-
-* Strictest filtering rules
-* High-security configuration
-* Best for sensitive environments
+* most users
+* families
+* balanced protection
 
 ---
 
-# 🧠 How to Use This Page
+# 🟡 3. Business Essentials
 
-1. Pick a package above
-2. Open its folder
-3. Follow the `install.md`
-4. Apply it to your network
-5. Devices automatically become protected
+Entry-level business protection.
+
+Includes:
+
+* Everything in Privacy Plus
+* Firewall (Protectli)
+* VPN
+* Managed switch
+* Access points
+
+👉 Best for:
+
+* small offices
+* home businesses
 
 ---
 
-# ⚙️ Recommendation
+# 🟠 4. Pro Business Guard
 
-If you're not sure what to choose:
+Advanced business security.
 
-👉 Start with **Privacy Plus**
+Includes:
 
-It gives the best balance of simplicity and protection.
+* Everything in Business Essentials
+* Monitoring-ready system (future dashboards)
+
+👉 Best for:
+
+* advanced users
+* environments needing visibility
 
 ---
 
-# 🧭 Important Note
+# 🔴 5. Ultimate Offense
 
-All packages are independent.
+Maximum protection and detection.
 
-You are free to:
+Includes:
 
-* upgrade later
-* switch packages
-* reconfigure at any time
+* Everything in Pro Business Guard
+* Backup systems (failover Pi-hole)
+* Honeypot (threat detection)
 
-No package locks you into anything.
+👉 Best for:
+
+* high-security environments
+* users who want full visibility + redundancy
+
+---
+
+# 🧠 Not Sure Where to Start?
+
+👉 Choose **Privacy Plus**
+
+It provides the best balance of simplicity and protection.
+
+---
+
+# ⚠️ Important
+
+* Packages are NOT locked
+* You can upgrade at any time
+* Each package builds on the previous
+
+---
+
+# 🚀 Next Step
+
+Choose a package and open its folder:
+
+👉 `/packages/1-starter-shield/`
+👉 `/packages/2-privacy-plus/`
+👉 etc.
