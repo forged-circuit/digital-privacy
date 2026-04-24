@@ -1,11 +1,69 @@
-# 🧭 Basic Dashboard Layout (Forged Circuit)
+# 🧭 Forged Circuit — Basic Dashboard
 
-This dashboard provides a simple, clean overview of your network health and protection status.
+This dashboard provides a clean, real-time view of your network health, protection status, and device activity.
 
-It is designed for:
+Designed for:
 
 * Home Users
 * Most Pro Users
+
+---
+
+# 🎯 Purpose
+
+This dashboard answers:
+
+* Is my network working?
+* Is anything being blocked?
+* Are there unknown devices?
+* Is anything wrong?
+
+---
+
+# 🧱 Dashboard Layout
+
+## 🟢 DNS Overview
+
+* Total DNS Queries
+* % Blocked
+* Top Blocked Domains
+* Ads Blocked Over Time
+
+---
+
+## 🟡 Device Activity
+
+* Active Devices
+* New Devices (24h)
+* Unknown Devices
+
+---
+
+## 🔵 System Health
+
+* Pi-hole Status (all instances)
+
+---
+
+## 🟠 Network Health
+
+* Internet Status
+
+---
+
+## 🟣 Security Signals
+
+* Repeated Failed Queries
+
+---
+
+## ⚪ Protection Status
+
+* Overall system state:
+
+  * ✅ Good
+  * ⚠️ Warning
+  * 🔴 Critical
 
 ---
 
@@ -20,177 +78,56 @@ It is designed for:
 
 ---
 
-### Branding
+# ⚠️ Alert Behavior
 
-* Dashboard Name: **Forged Circuit**
-* Top-left icon: Hammer logo
-* Bottom-left visual: Circuit graphic
-
----
-
-# 🧱 Layout Structure
-
-```text
-TOP ROW → DNS OVERVIEW
-
-[ Total DNS ] [ % Blocked ] [ Top Domains ] [ Ads Over Time ]
-
-MIDDLE ROW → DEVICE ACTIVITY
-
-[ Active Devices ] [ New Devices ] [ Unknown Devices ]
-
-RIGHT PANEL → SYSTEM HEALTH
-
-[ Pi-hole Status (All Instances) ]
-
-BOTTOM ROW → NETWORK + SECURITY
-
-[ Internet Status ] [ Failed Queries ] [ Protection Status ]
-```
-
----
-
-# 🧩 Widget Definitions
-
-## 🟢 DNS OVERVIEW
-
-### 1. Total DNS Queries
-
-* Timeframe: Last 24 hours
-* Type: Stat + sparkline
-* Source: Pi-hole
-
----
-
-### 2. % Blocked
-
-* Timeframe: Last 24 hours
-* Type: Stat + sparkline
-* Source: Pi-hole
-
----
-
-### 3. Top Blocked Domains
-
-* Type: List (Top 5)
-* Source: Pi-hole
-
----
-
-### 4. Ads Blocked Over Time
-
-* Type: Line chart
-* Timeframe: 24h
-* Source: Pi-hole
-
----
-
-## 🟡 DEVICE / NETWORK
-
-### 5. Active Devices
-
-* Count of currently active clients
-
----
-
-### 6. New Devices (24h)
-
-* Devices seen for the first time
-
----
-
-### 7. Unknown Devices
-
-* Devices without labels / classification
-
----
-
-## 🔵 SYSTEM HEALTH
-
-### 8. Pi-hole Status (All Devices)
-
-Display:
-
-* pihole-primary → Online (green)
-* pihole-backup → Online (green)
-* pihole-failover → Offline (RED)
-
----
-
-## 🟠 NETWORK HEALTH
-
-### 9. Internet Status
-
-* Online / Offline indicator
-* Must turn RED if offline
-
----
-
-## 🟣 SECURITY SIGNALS
-
-### 10. Repeated Failed Queries
-
-* Count over 24h
-* Bar chart or stat
-* Highlight spikes
-
----
-
-## ⚪ USER STATUS
-
-### 11. Protection Status
-
-States:
-
-* GOOD → all systems working
-* WARNING → minor issues
-* CRITICAL → failures detected
-
----
-
-# ⚠️ Alert Rules
-
-These should trigger RED:
+The following will trigger RED:
 
 * Pi-hole offline
 * Internet offline
-* High failed query spikes
+* High failed query activity
 
 ---
 
-# 🧠 Data Sources
+# 🔌 Data Sources
 
-Primary:
+This dashboard expects:
 
-* Pi-hole API
-
-Optional:
-
-* Prometheus (for system metrics)
-* Node Exporter
+* Pi-hole metrics (via API, exporter, or Prometheus)
+* Optional: system metrics (if extended later)
 
 ---
 
-# 🎯 Goal
+# 📥 Import Instructions
 
-This dashboard answers:
+1. Open Grafana
+2. Go to **Dashboards → Import**
+3. Upload:
 
-* Is my network working?
-* Is anything being blocked?
-* Are there unknown devices?
-* Is anything wrong?
+👉 `forged-circuit-basic.json`
+
+4. Select your datasource
+5. Save
 
 ---
 
-# 🚀 Next Step
+# ⚠️ Important
 
-Import or build dashboard using:
+You may need to adjust metric names depending on your setup.
 
-👉 Grafana
+Common setups:
 
-Then connect:
+* Pi-hole exporter
+* Prometheus
+* Direct API integrations
 
-* Pi-hole API
-* Optional monitoring stack
+---
+
+# 🚀 Next Steps
+
+After importing:
+
+* Apply branding (colors, logos)
+* Connect real data sources
+* Move to advanced dashboards when ready
 
 ---
