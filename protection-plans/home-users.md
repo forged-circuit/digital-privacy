@@ -1,94 +1,110 @@
 # 🏠 Home Users
 
-This section is for personal use, families, and home networks.
+This path is for personal use, families, and home networks.
+
+You can choose any protection level depending on how much control and security you want.
 
 ---
 
-# 🧭 Recommended Setup (Most Users)
+# 🧭 Recommended Starting Point
 
-If you are unsure where to start:
+👉 **Privacy Plus**
 
-👉 **Start with Privacy Plus (recommended)**
-👉 Or begin with Starter Shield if you want something lighter
-
-These two cover most home use cases.
+Best balance of simplicity and protection for most homes.
 
 ---
 
-# 📦 All Available Home Packages
+# 📦 Available Packages
 
-You are free to choose any of the following:
+---
 
 ## 🟢 Starter Shield
 
-Basic network protection.
+Basic protection.
 
-* Pi-hole (Tier 1)
-* Optional: Home setup OR password manager
+* Blocks ads and trackers
+* Choose:
 
-👉 Best for beginners
+  * device monitoring OR
+  * password manager
+
+👉 Good for:
+
+* first-time users
+* simple setups
 
 ---
 
 ## 🔵 Privacy Plus (Recommended)
 
-Full home protection system.
+Full home protection.
 
-* Pi-hole (Tier 1)
-* Identity protection (Tier 3)
+* Ad blocking across all devices
+* Device awareness
+* Password security
 
-👉 Best balance of simplicity and security
+👉 Best for:
+
+* most users
+* families
 
 ---
 
-## 🟡 Business Essentials (Advanced Home Use)
+## 🟡 Business Essentials
 
-Small office-level protection (can also be used at home).
+Advanced home network.
 
-* Network filtering
-* Identity protection
-* VPN + firewall
-* Network improvements
+* Network segmentation (VLANs)
+* Firewall + VPN
+* Better performance and control
 
-👉 For advanced home setups
+👉 Good for:
+
+* large homes
+* tech-savvy users
 
 ---
 
 ## 🟠 Pro Business Guard
 
-Advanced visibility and monitoring.
+Adds visibility layer.
 
-* Everything in Business Essentials
-* Monitoring dashboards (Tier 7)
+* Prepares for monitoring dashboards
+* More control over network activity
 
-👉 For users who want insight into network activity
+👉 Good for:
+
+* advanced users
+* home labs
 
 ---
 
 ## 🔴 Ultimate Offense
 
-Maximum protection system.
+Maximum protection.
 
-* All tiers (1–8)
-* Backup, monitoring, and threat detection
+* Backup systems
+* Threat detection (honeypot)
 
-👉 For high-security environments
+👉 Good for:
 
----
-
-# ⚙️ Where to Go Next
-
-👉 Select a package:
-/packages/
-
-Then follow the install guide inside.
+* high-security environments
+* users who want full control
 
 ---
 
-# 🧠 Simple Rule
+# 🧠 How to Choose
 
-If you're unsure:
+If unsure:
 
-👉 Start with Privacy Plus
+👉 Start with **Privacy Plus**
 
-You can always upgrade later without reinstalling.
+You can upgrade later at any time.
+
+---
+
+# 🚀 Next Step
+
+Go to:
+
+👉 `/packages/`
