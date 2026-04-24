@@ -1,15 +1,35 @@
 {
-  "title": "Forged Circuit - Basic",
+  "title": "Forged Circuit",
   "timezone": "browser",
   "schemaVersion": 38,
-  "version": 2,
+  "version": 3,
   "refresh": "10s",
   "panels": [
+    {
+      "type": "text",
+      "title": "Header Branding",
+      "gridPos": { "x": 18, "y": 0, "w": 6, "h": 2 },
+      "options": {
+        "mode": "html"
+      },
+      "content": "<div style=\"display:flex;align-items:center;justify-content:flex-end;background:transparent;\"><img src=\"YOUR_LOGO_URL\" style=\"height:32px;margin-right:10px;\"><span style=\"color:#00BFFF;font-size:20px;font-weight:bold;\">Forged Circuit</span></div>"
+    },
     {
       "type": "stat",
       "title": "Total DNS Queries",
       "gridPos": { "x": 0, "y": 0, "w": 6, "h": 4 },
-      "targets": [{ "expr": "pihole_dns_queries_total" }]
+      "targets": [{ "expr": "pihole_dns_queries_total" }],
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "fixed",
+            "fixedColor": "#00BFFF"
+          },
+          "valueTextColor": "#C0C0C0",
+          "background": "transparent",
+          "decimals": 0
+        }
+      }
     },
     {
       "type": "stat",
@@ -19,7 +39,13 @@
       "fieldConfig": {
         "defaults": {
           "unit": "percent",
-          "decimals": 1
+          "decimals": 1,
+          "color": {
+            "mode": "fixed",
+            "fixedColor": "#00BFFF"
+          },
+          "valueTextColor": "#C0C0C0",
+          "background": "transparent"
         }
       }
     },
@@ -27,88 +53,160 @@
       "type": "table",
       "title": "Top Blocked Domains",
       "gridPos": { "x": 12, "y": 0, "w": 6, "h": 4 },
-      "targets": [{ "expr": "topk(5, pihole_top_blocked_domains)" }]
+      "targets": [{ "expr": "topk(5, pihole_top_blocked_domains)" }],
+      "options": {
+        "showHeader": true,
+        "cellBackground": "#FFF9E5",
+        "headerColor": "#00BFFF",
+        "cellTextColor": "#C0C0C0"
+      }
     },
     {
       "type": "timeseries",
       "title": "Ads Blocked Over Time",
-      "gridPos": { "x": 18, "y": 0, "w": 6, "h": 4 },
-      "targets": [{ "expr": "pihole_dns_queries_blocked" }]
+      "gridPos": { "x": 0, "y": 4, "w": 6, "h": 4 },
+      "targets": [{ "expr": "pihole_dns_queries_blocked" }],
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "fixed",
+            "fixedColor": "#FFD700"
+          },
+          "decimals": 0
+        }
+      },
+      "options": {
+        "fillOpacity": 0.15,
+        "showGrid": false,
+        "background": "transparent"
+      }
     },
-
     {
       "type": "stat",
       "title": "Active Devices",
-      "gridPos": { "x": 0, "y": 4, "w": 6, "h": 4 },
-      "targets": [{ "expr": "pihole_active_clients" }]
+      "gridPos": { "x": 6, "y": 4, "w": 6, "h": 4 },
+      "targets": [{ "expr": "pihole_active_clients" }],
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 0,
+          "color": {
+            "mode": "fixed",
+            "fixedColor": "#00BFFF"
+          },
+          "valueTextColor": "#C0C0C0",
+          "background": "transparent"
+        }
+      }
     },
     {
       "type": "stat",
       "title": "New Devices (24h)",
-      "gridPos": { "x": 6, "y": 4, "w": 6, "h": 4 },
-      "targets": [{ "expr": "pihole_new_devices_24h" }]
+      "gridPos": { "x": 12, "y": 4, "w": 6, "h": 4 },
+      "targets": [{ "expr": "pihole_new_devices_24h" }],
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 0,
+          "color": {
+            "mode": "fixed",
+            "fixedColor": "#00BFFF"
+          },
+          "valueTextColor": "#C0C0C0",
+          "background": "transparent"
+        }
+      }
     },
     {
       "type": "stat",
       "title": "Unknown Devices",
-      "gridPos": { "x": 12, "y": 4, "w": 6, "h": 4 },
-      "targets": [{ "expr": "pihole_unknown_devices" }]
+      "gridPos": { "x": 18, "y": 4, "w": 6, "h": 4 },
+      "targets": [{ "expr": "pihole_unknown_devices" }],
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 0,
+          "color": {
+            "mode": "fixed",
+            "fixedColor": "#00BFFF"
+          },
+          "valueTextColor": "#C0C0C0",
+          "background": "transparent"
+        }
+      }
     },
-
     {
       "type": "stat",
       "title": "Pi-hole Status",
-      "gridPos": { "x": 18, "y": 4, "w": 6, "h": 8 },
+      "gridPos": { "x": 0, "y": 8, "w": 6, "h": 8 },
       "targets": [{ "expr": "pihole_status" }],
       "fieldConfig": {
         "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
           "mappings": [
             { "options": { "0": { "text": "Offline" }, "1": { "text": "Online" } }, "type": "value" }
           ],
           "thresholds": {
             "steps": [
-              { "color": "red", "value": 0 },
-              { "color": "green", "value": 1 }
+              { "color": "#FF3B30", "value": 0 },
+              { "color": "#00BFFF", "value": 1 }
             ]
-          }
+          },
+          "background": "transparent"
         }
       }
     },
-
     {
       "type": "stat",
       "title": "Internet Status",
-      "gridPos": { "x": 0, "y": 8, "w": 6, "h": 4 },
+      "gridPos": { "x": 6, "y": 8, "w": 6, "h": 4 },
       "targets": [{ "expr": "internet_up" }],
       "fieldConfig": {
         "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
           "mappings": [
             { "options": { "0": { "text": "Offline" }, "1": { "text": "Online" } }, "type": "value" }
           ],
           "thresholds": {
             "steps": [
-              { "color": "red", "value": 0 },
-              { "color": "green", "value": 1 }
+              { "color": "#FF3B30", "value": 0 },
+              { "color": "#00BFFF", "value": 1 }
             ]
-          }
+          },
+          "background": "transparent"
         }
       }
     },
-
     {
       "type": "timeseries",
       "title": "Repeated Failed Queries",
-      "gridPos": { "x": 6, "y": 8, "w": 6, "h": 4 },
-      "targets": [{ "expr": "pihole_failed_queries" }]
+      "gridPos": { "x": 12, "y": 8, "w": 6, "h": 4 },
+      "targets": [{ "expr": "pihole_failed_queries" }],
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "fixed",
+            "fixedColor": "#FFD700"
+          }
+        }
+      },
+      "options": {
+        "fillOpacity": 0.15,
+        "showGrid": false,
+        "background": "transparent"
+      }
     },
-
     {
       "type": "stat",
       "title": "Protection Status",
-      "gridPos": { "x": 12, "y": 8, "w": 12, "h": 4 },
+      "gridPos": { "x": 18, "y": 8, "w": 6, "h": 4 },
       "targets": [{ "expr": "protection_status" }],
       "fieldConfig": {
         "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
           "mappings": [
             {
               "options": {
@@ -121,13 +219,23 @@
           ],
           "thresholds": {
             "steps": [
-              { "color": "red", "value": 0 },
-              { "color": "yellow", "value": 1 },
-              { "color": "green", "value": 2 }
+              { "color": "#FF3B30", "value": 0 },
+              { "color": "#FFD700", "value": 1 },
+              { "color": "#C0C0C0", "value": 2 }
             ]
-          }
+          },
+          "background": "transparent"
         }
       }
+    },
+    {
+      "type": "text",
+      "title": "Circuit Graphic",
+      "gridPos": { "x": 0, "y": 12, "w": 24, "h": 2 },
+      "options": {
+        "mode": "html"
+      },
+      "content": "<div style=\"opacity:0.2;\"><img src=\"YOUR_CIRCUIT_IMAGE_URL\" style=\"width:100%;\"></div>"
     }
   ]
 }
