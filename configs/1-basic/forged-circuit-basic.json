@@ -12,7 +12,7 @@
       "options": {
         "mode": "html"
       },
-      "content": "<div style=\"display:flex;align-items:center;justify-content:flex-end;background:transparent;\"><img src=\"YOUR_LOGO_URL\" style=\"height:32px;margin-right:10px;\"><span style=\"color:#00BFFF;font-size:20px;font-weight:bold;\">Forged Circuit</span></div>"
+      "content": "<div style=\"display:flex;align-items:center;justify-content:flex-end;background:transparent;\"><img src=\"https://github.com/forged-circuit/digital-privacy/blob/main/pictures/logo-hammer.png" style=\"height:32px;margin-right:10px;\"><span style=\"color:#00BFFF;font-size:20px;font-weight:bold;\">Forged Circuit</span></div>"
     },
     {
       "type": "stat",
@@ -235,7 +235,7 @@
       "options": {
         "mode": "html"
       },
-      "content": "<div style=\"opacity:0.2;\"><img src=\"YOUR_CIRCUIT_IMAGE_URL\" style=\"width:100%;\"></div>"
+      "content": "<div style=\"opacity:0.2;\"><img src=\"https://github.com/forged-circuit/digital-privacy/blob/main/pictures/logo-circuits.png" style=\"width:100%;\"></div>"
     }
   ]
 }
