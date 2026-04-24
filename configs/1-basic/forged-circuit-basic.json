@@ -1,0 +1,133 @@
+{
+  "title": "Forged Circuit - Basic",
+  "timezone": "browser",
+  "schemaVersion": 38,
+  "version": 2,
+  "refresh": "10s",
+  "panels": [
+    {
+      "type": "stat",
+      "title": "Total DNS Queries",
+      "gridPos": { "x": 0, "y": 0, "w": 6, "h": 4 },
+      "targets": [{ "expr": "pihole_dns_queries_total" }]
+    },
+    {
+      "type": "stat",
+      "title": "% Blocked",
+      "gridPos": { "x": 6, "y": 0, "w": 6, "h": 4 },
+      "targets": [{ "expr": "(pihole_dns_queries_blocked / pihole_dns_queries_total) * 100" }],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percent",
+          "decimals": 1
+        }
+      }
+    },
+    {
+      "type": "table",
+      "title": "Top Blocked Domains",
+      "gridPos": { "x": 12, "y": 0, "w": 6, "h": 4 },
+      "targets": [{ "expr": "topk(5, pihole_top_blocked_domains)" }]
+    },
+    {
+      "type": "timeseries",
+      "title": "Ads Blocked Over Time",
+      "gridPos": { "x": 18, "y": 0, "w": 6, "h": 4 },
+      "targets": [{ "expr": "pihole_dns_queries_blocked" }]
+    },
+
+    {
+      "type": "stat",
+      "title": "Active Devices",
+      "gridPos": { "x": 0, "y": 4, "w": 6, "h": 4 },
+      "targets": [{ "expr": "pihole_active_clients" }]
+    },
+    {
+      "type": "stat",
+      "title": "New Devices (24h)",
+      "gridPos": { "x": 6, "y": 4, "w": 6, "h": 4 },
+      "targets": [{ "expr": "pihole_new_devices_24h" }]
+    },
+    {
+      "type": "stat",
+      "title": "Unknown Devices",
+      "gridPos": { "x": 12, "y": 4, "w": 6, "h": 4 },
+      "targets": [{ "expr": "pihole_unknown_devices" }]
+    },
+
+    {
+      "type": "stat",
+      "title": "Pi-hole Status",
+      "gridPos": { "x": 18, "y": 4, "w": 6, "h": 8 },
+      "targets": [{ "expr": "pihole_status" }],
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [
+            { "options": { "0": { "text": "Offline" }, "1": { "text": "Online" } }, "type": "value" }
+          ],
+          "thresholds": {
+            "steps": [
+              { "color": "red", "value": 0 },
+              { "color": "green", "value": 1 }
+            ]
+          }
+        }
+      }
+    },
+
+    {
+      "type": "stat",
+      "title": "Internet Status",
+      "gridPos": { "x": 0, "y": 8, "w": 6, "h": 4 },
+      "targets": [{ "expr": "internet_up" }],
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [
+            { "options": { "0": { "text": "Offline" }, "1": { "text": "Online" } }, "type": "value" }
+          ],
+          "thresholds": {
+            "steps": [
+              { "color": "red", "value": 0 },
+              { "color": "green", "value": 1 }
+            ]
+          }
+        }
+      }
+    },
+
+    {
+      "type": "timeseries",
+      "title": "Repeated Failed Queries",
+      "gridPos": { "x": 6, "y": 8, "w": 6, "h": 4 },
+      "targets": [{ "expr": "pihole_failed_queries" }]
+    },
+
+    {
+      "type": "stat",
+      "title": "Protection Status",
+      "gridPos": { "x": 12, "y": 8, "w": 12, "h": 4 },
+      "targets": [{ "expr": "protection_status" }],
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [
+            {
+              "options": {
+                "0": { "text": "CRITICAL" },
+                "1": { "text": "WARNING" },
+                "2": { "text": "GOOD" }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "steps": [
+              { "color": "red", "value": 0 },
+              { "color": "yellow", "value": 1 },
+              { "color": "green", "value": 2 }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
