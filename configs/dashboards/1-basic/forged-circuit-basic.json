@@ -1,241 +1,168 @@
 {
-  "title": "Forged Circuit",
+  "title": "Forged Circuit - Network Protection",
   "timezone": "browser",
   "schemaVersion": 38,
-  "version": 3,
+  "version": 1,
   "refresh": "10s",
+
   "panels": [
+
     {
       "type": "text",
-      "title": "Header Branding",
-      "gridPos": { "x": 18, "y": 0, "w": 6, "h": 2 },
-      "options": {
-        "mode": "html"
-      },
-      "content": "<div style=\"display:flex;align-items:center;justify-content:flex-end;background:transparent;\"><img src=\"https://github.com/forged-circuit/digital-privacy/blob/main/pictures/logo-hammer.png" style=\"height:32px;margin-right:10px;\"><span style=\"color:#00BFFF;font-size:20px;font-weight:bold;\">Forged Circuit</span></div>"
+      "title": "Brand Header",
+      "gridPos": { "x": 0, "y": 0, "w": 24, "h": 2 },
+      "options": { "mode": "html" },
+      "content": "<div style=\"display:flex;align-items:center;justify-content:space-between;\"><div style=\"display:flex;align-items:center;\"><img src=\"https://raw.githubusercontent.com/forged-circuit/digital-privacy/main/pictures/logo-hammer.png\" style=\"height:34px;margin-right:12px;\"><span style=\"color:#00BFFF;font-size:22px;font-weight:bold;\">Forged Circuit</span></div><span style=\"color:#C0C0C0;font-size:14px;\">Home Network Protection</span></div>"
     },
+
     {
       "type": "stat",
-      "title": "Total DNS Queries",
-      "gridPos": { "x": 0, "y": 0, "w": 6, "h": 4 },
+      "title": "Total Network Activity",
+      "gridPos": { "x": 0, "y": 2, "w": 6, "h": 4 },
       "targets": [{ "expr": "pihole_dns_queries_total" }],
       "fieldConfig": {
         "defaults": {
-          "color": {
-            "mode": "fixed",
-            "fixedColor": "#00BFFF"
-          },
-          "valueTextColor": "#C0C0C0",
-          "background": "transparent",
+          "color": { "mode": "fixed", "fixedColor": "#00BFFF" },
           "decimals": 0
         }
       }
     },
+
     {
       "type": "stat",
-      "title": "% Blocked",
-      "gridPos": { "x": 6, "y": 0, "w": 6, "h": 4 },
-      "targets": [{ "expr": "(pihole_dns_queries_blocked / pihole_dns_queries_total) * 100" }],
+      "title": "Threats Blocked",
+      "gridPos": { "x": 6, "y": 2, "w": 6, "h": 4 },
+      "targets": [
+        { "expr": "(pihole_dns_queries_blocked / pihole_dns_queries_total) * 100" }
+      ],
       "fieldConfig": {
         "defaults": {
           "unit": "percent",
           "decimals": 1,
-          "color": {
-            "mode": "fixed",
-            "fixedColor": "#00BFFF"
-          },
-          "valueTextColor": "#C0C0C0",
-          "background": "transparent"
+          "thresholds": {
+            "steps": [
+              { "color": "#00FF7F", "value": 0 },
+              { "color": "#FFFF00", "value": 20 },
+              { "color": "#FF3B30", "value": 40 }
+            ]
+          }
         }
       }
     },
-    {
-      "type": "table",
-      "title": "Top Blocked Domains",
-      "gridPos": { "x": 12, "y": 0, "w": 6, "h": 4 },
-      "targets": [{ "expr": "topk(5, pihole_top_blocked_domains)" }],
-      "options": {
-        "showHeader": true,
-        "cellBackground": "#FFF9E5",
-        "headerColor": "#00BFFF",
-        "cellTextColor": "#C0C0C0"
-      }
-    },
-    {
-      "type": "timeseries",
-      "title": "Ads Blocked Over Time",
-      "gridPos": { "x": 0, "y": 4, "w": 6, "h": 4 },
-      "targets": [{ "expr": "pihole_dns_queries_blocked" }],
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "fixed",
-            "fixedColor": "#FFD700"
-          },
-          "decimals": 0
-        }
-      },
-      "options": {
-        "fillOpacity": 0.15,
-        "showGrid": false,
-        "background": "transparent"
-      }
-    },
+
     {
       "type": "stat",
-      "title": "Active Devices",
-      "gridPos": { "x": 6, "y": 4, "w": 6, "h": 4 },
+      "title": "Protected Devices",
+      "gridPos": { "x": 12, "y": 2, "w": 6, "h": 4 },
       "targets": [{ "expr": "pihole_active_clients" }],
       "fieldConfig": {
         "defaults": {
           "decimals": 0,
-          "color": {
-            "mode": "fixed",
-            "fixedColor": "#00BFFF"
-          },
-          "valueTextColor": "#C0C0C0",
-          "background": "transparent"
+          "color": { "mode": "fixed", "fixedColor": "#00BFFF" }
         }
       }
     },
-    {
-      "type": "stat",
-      "title": "New Devices (24h)",
-      "gridPos": { "x": 12, "y": 4, "w": 6, "h": 4 },
-      "targets": [{ "expr": "pihole_new_devices_24h" }],
-      "fieldConfig": {
-        "defaults": {
-          "decimals": 0,
-          "color": {
-            "mode": "fixed",
-            "fixedColor": "#00BFFF"
-          },
-          "valueTextColor": "#C0C0C0",
-          "background": "transparent"
-        }
-      }
-    },
-    {
-      "type": "stat",
-      "title": "Unknown Devices",
-      "gridPos": { "x": 18, "y": 4, "w": 6, "h": 4 },
-      "targets": [{ "expr": "pihole_unknown_devices" }],
-      "fieldConfig": {
-        "defaults": {
-          "decimals": 0,
-          "color": {
-            "mode": "fixed",
-            "fixedColor": "#00BFFF"
-          },
-          "valueTextColor": "#C0C0C0",
-          "background": "transparent"
-        }
-      }
-    },
-    {
-      "type": "stat",
-      "title": "Pi-hole Status",
-      "gridPos": { "x": 0, "y": 8, "w": 6, "h": 8 },
-      "targets": [{ "expr": "pihole_status" }],
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [
-            { "options": { "0": { "text": "Offline" }, "1": { "text": "Online" } }, "type": "value" }
-          ],
-          "thresholds": {
-            "steps": [
-              { "color": "#FF3B30", "value": 0 },
-              { "color": "#00BFFF", "value": 1 }
-            ]
-          },
-          "background": "transparent"
-        }
-      }
-    },
-    {
-      "type": "stat",
-      "title": "Internet Status",
-      "gridPos": { "x": 6, "y": 8, "w": 6, "h": 4 },
-      "targets": [{ "expr": "internet_up" }],
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [
-            { "options": { "0": { "text": "Offline" }, "1": { "text": "Online" } }, "type": "value" }
-          ],
-          "thresholds": {
-            "steps": [
-              { "color": "#FF3B30", "value": 0 },
-              { "color": "#00BFFF", "value": 1 }
-            ]
-          },
-          "background": "transparent"
-        }
-      }
-    },
-    {
-      "type": "timeseries",
-      "title": "Repeated Failed Queries",
-      "gridPos": { "x": 12, "y": 8, "w": 6, "h": 4 },
-      "targets": [{ "expr": "pihole_failed_queries" }],
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "fixed",
-            "fixedColor": "#FFD700"
-          }
-        }
-      },
-      "options": {
-        "fillOpacity": 0.15,
-        "showGrid": false,
-        "background": "transparent"
-      }
-    },
+
     {
       "type": "stat",
       "title": "Protection Status",
-      "gridPos": { "x": 18, "y": 8, "w": 6, "h": 4 },
-      "targets": [{ "expr": "protection_status" }],
+      "gridPos": { "x": 18, "y": 2, "w": 6, "h": 4 },
+      "targets": [{ "expr": "pihole_status" }],
       "fieldConfig": {
         "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
           "mappings": [
             {
+              "type": "value",
               "options": {
-                "0": { "text": "CRITICAL" },
-                "1": { "text": "WARNING" },
-                "2": { "text": "GOOD" }
-              },
-              "type": "value"
+                "0": { "text": "Offline" },
+                "1": { "text": "Protected" }
+              }
             }
           ],
           "thresholds": {
             "steps": [
               { "color": "#FF3B30", "value": 0 },
-              { "color": "#FFD700", "value": 1 },
-              { "color": "#C0C0C0", "value": 2 }
+              { "color": "#00FF7F", "value": 1 }
             ]
-          },
-          "background": "transparent"
+          }
         }
       }
     },
+
     {
-      "type": "text",
-      "title": "Circuit Graphic",
-      "gridPos": { "x": 0, "y": 12, "w": 24, "h": 2 },
-      "options": {
-        "mode": "html"
-      },
-      "content": "<div style=\"opacity:0.2;\"><img src=\"https://github.com/forged-circuit/digital-privacy/blob/main/pictures/logo-circuits.png" style=\"width:100%;\"></div>"
+      "type": "timeseries",
+      "title": "Live Network Activity",
+      "gridPos": { "x": 0, "y": 6, "w": 12, "h": 6 },
+      "targets": [
+        { "expr": "sum(rate(pihole_dns_queries_total[5m]))", "legendFormat": "Total Activity" },
+        { "expr": "sum(rate(pihole_dns_queries_blocked[5m]))", "legendFormat": "Blocked Threats" }
+      ],
+      "options": { "fillOpacity": 0.2 }
+    },
+
+    {
+      "type": "timeseries",
+      "title": "Threat Blocking Trend",
+      "gridPos": { "x": 12, "y": 6, "w": 12, "h": 6 },
+      "targets": [
+        { "expr": "rate(pihole_dns_queries_blocked[5m])" }
+      ],
+      "options": { "fillOpacity": 0.2 }
+    },
+
+    {
+      "type": "table",
+      "title": "Most Active Devices",
+      "gridPos": { "x": 0, "y": 12, "w": 12, "h": 6 },
+      "targets": [
+        { "expr": "topk(5, sum by (client) (pihole_dns_queries_total))" }
+      ]
+    },
+
+    {
+      "type": "table",
+      "title": "Top Threat Sources Blocked",
+      "gridPos": { "x": 12, "y": 12, "w": 12, "h": 6 },
+      "targets": [
+        { "expr": "topk(5, pihole_top_blocked_domains)" }
+      ]
+    },
+
+    {
+      "type": "stat",
+      "title": "Internet Connection",
+      "gridPos": { "x": 0, "y": 18, "w": 6, "h": 4 },
+      "targets": [{ "expr": "internet_up" }],
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [
+            {
+              "type": "value",
+              "options": {
+                "0": { "text": "Offline" },
+                "1": { "text": "Online" }
+              }
+            }
+          ],
+          "thresholds": {
+            "steps": [
+              { "color": "#FF3B30", "value": 0 },
+              { "color": "#00FF7F", "value": 1 }
+            ]
+          }
+        }
+      }
+    },
+
+    {
+      "type": "timeseries",
+      "title": "Connection Issues / Drops",
+      "gridPos": { "x": 6, "y": 18, "w": 18, "h": 4 },
+      "targets": [
+        { "expr": "rate(pihole_failed_queries[5m])" }
+      ],
+      "options": { "fillOpacity": 0.2 }
     }
+
   ]
 }
