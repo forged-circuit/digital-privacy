@@ -20,6 +20,21 @@ function initCharts() {
   });
 }
 
+function updateAlert(blocked) {
+  const alert = document.querySelector(".alert-text");
+
+  if (blocked > 300) {
+    alert.innerText = "High number of blocked requests detected.";
+    alert.parentElement.style.borderLeftColor = "#ff3b30";
+  } else if (blocked > 100) {
+    alert.innerText = "Moderate activity detected. Monitoring traffic.";
+    alert.parentElement.style.borderLeftColor = "#ffff00";
+  } else {
+    alert.innerText = "No active threats detected. System operating normally.";
+    alert.parentElement.style.borderLeftColor = "#00ff7f";
+  }
+}
+
 function updateTables() {
   const devices = [
     { name: "iPhone", ip: "192.168.1.10", req: 1200, status: "good" },
@@ -52,16 +67,20 @@ function updateTables() {
 }
 
 function updateUI() {
-  document.getElementById("blocked").innerText = Math.floor(Math.random()*500);
-  document.getElementById("queries").innerText = Math.floor(Math.random()*10000);
-  document.getElementById("devices").innerText = Math.floor(Math.random()*20);
+  const blocked = Math.floor(Math.random() * 500);
+
+  document.getElementById("blocked").innerText = blocked;
+  document.getElementById("queries").innerText = Math.floor(Math.random() * 10000);
+  document.getElementById("devices").innerText = Math.floor(Math.random() * 20);
   document.getElementById("internet").innerText = "Online";
+
+  updateAlert(blocked);
 }
 
 function updateCharts() {
   const t = new Date().toLocaleTimeString();
-  const val = Math.random()*200;
-  const blocked = Math.random()*100;
+  const val = Math.random() * 200;
+  const blocked = Math.random() * 100;
 
   activityChart.data.labels.push(t);
   activityChart.data.datasets[0].data.push(val);
