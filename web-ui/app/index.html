@@ -8,34 +8,88 @@
 
 <body>
 
+  <!-- HEADER -->
   <div class="header">
-    <img src="assets/logo.png" class="logo">
-    <div class="title">Forged Circuit</div>
+    <div class="header-left">
+      <img src="assets/logo.png" class="logo">
+      <div class="title">Forged Circuit</div>
+    </div>
     <div class="subtitle">Home Network Protection</div>
   </div>
 
-  <div class="grid">
+  <!-- CORE STATS -->
+  <div class="section">
+    <div class="grid-4">
+      <div class="card">
+        <h3>Threats Blocked</h3>
+        <div class="value" id="blocked">--</div>
+      </div>
 
-    <div class="card">
-      <h3>Threats Blocked</h3>
-      <div id="blocked">--</div>
+      <div class="card">
+        <h3>Network Activity</h3>
+        <div class="value" id="queries">--</div>
+      </div>
+
+      <div class="card">
+        <h3>Protected Devices</h3>
+        <div class="value" id="devices">--</div>
+      </div>
+
+      <div class="card">
+        <h3>Internet Status</h3>
+        <div class="value" id="internet">--</div>
+      </div>
     </div>
+  </div>
 
-    <div class="card">
-      <h3>DNS Queries</h3>
-      <div id="queries">--</div>
+  <!-- CHARTS -->
+  <div class="section">
+    <div class="grid-2">
+      <div class="card large">
+        <h3>Network Activity (Live)</h3>
+        <div class="placeholder">Chart Coming Soon</div>
+      </div>
+
+      <div class="card large">
+        <h3>Threat Blocking Trend</h3>
+        <div class="placeholder">Chart Coming Soon</div>
+      </div>
     </div>
+  </div>
 
-    <div class="card">
-      <h3>Protected Devices</h3>
-      <div id="devices">--</div>
+  <!-- TABLES -->
+  <div class="section">
+    <div class="grid-2">
+      <div class="card large">
+        <h3>Most Active Devices</h3>
+        <div class="placeholder">Table Coming Soon</div>
+      </div>
+
+      <div class="card large">
+        <h3>Top Blocked Domains</h3>
+        <div class="placeholder">Table Coming Soon</div>
+      </div>
     </div>
+  </div>
 
-    <div class="card">
-      <h3>Internet Status</h3>
-      <div id="internet">--</div>
+  <!-- SYSTEM STATUS -->
+  <div class="section">
+    <div class="grid-3">
+      <div class="card">
+        <h3>Connection Stability</h3>
+        <div class="value">--</div>
+      </div>
+
+      <div class="card">
+        <h3>DNS System</h3>
+        <div class="value">--</div>
+      </div>
+
+      <div class="card">
+        <h3>System Health</h3>
+        <div class="value">--</div>
+      </div>
     </div>
-
   </div>
 
   <script src="app.js"></script>
