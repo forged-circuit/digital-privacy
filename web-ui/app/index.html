@@ -4,8 +4,6 @@
   <meta charset="UTF-8" />
   <title>Forged Circuit</title>
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
@@ -63,15 +61,38 @@
   <!-- TABLES -->
   <div class="section">
     <div class="grid-2">
+
+      <!-- DEVICES TABLE -->
       <div class="card large">
         <h3>Most Active Devices</h3>
-        <div class="placeholder">Table Coming Soon</div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Device</th>
+              <th>IP</th>
+              <th>Requests</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="devicesTable"></tbody>
+        </table>
       </div>
 
+      <!-- DOMAINS TABLE -->
       <div class="card large">
         <h3>Top Blocked Domains</h3>
-        <div class="placeholder">Table Coming Soon</div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Domain</th>
+              <th>Hits</th>
+              <th>Risk</th>
+            </tr>
+          </thead>
+          <tbody id="domainsTable"></tbody>
+        </table>
       </div>
+
     </div>
   </div>
 
@@ -80,17 +101,17 @@
     <div class="grid-3">
       <div class="card">
         <h3>Connection Stability</h3>
-        <div class="value">--</div>
+        <div class="value">Stable</div>
       </div>
 
       <div class="card">
         <h3>DNS System</h3>
-        <div class="value">--</div>
+        <div class="value good">Active</div>
       </div>
 
       <div class="card">
         <h3>System Health</h3>
-        <div class="value">--</div>
+        <div class="value good">Good</div>
       </div>
     </div>
   </div>
