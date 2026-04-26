@@ -2,62 +2,69 @@ let activityChart;
 let threatChart;
 
 function initCharts() {
-  const ctx1 = document.getElementById("activityChart");
-  const ctx2 = document.getElementById("threatChart");
-
-  activityChart = new Chart(ctx1, {
+  activityChart = new Chart(document.getElementById("activityChart"), {
     type: "line",
-    data: {
-      labels: [],
-      datasets: [
-        {
-          label: "Total Traffic",
-          data: [],
-          borderColor: "#00bfff",
-          tension: 0.3
-        },
-        {
-          label: "Blocked",
-          data: [],
-          borderColor: "#00ff7f",
-          tension: 0.3
-        }
-      ]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false
-    }
+    data: { labels: [], datasets: [
+      { label: "Traffic", data: [], borderColor: "#00bfff" },
+      { label: "Blocked", data: [], borderColor: "#00ff7f" }
+    ]},
+    options: { responsive: true, maintainAspectRatio: false }
   });
 
-  threatChart = new Chart(ctx2, {
+  threatChart = new Chart(document.getElementById("threatChart"), {
     type: "bar",
-    data: {
-      labels: [],
-      datasets: [
-        {
-          label: "Blocked Requests",
-          data: [],
-          backgroundColor: "#00ff7f"
-        }
-      ]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false
-    }
+    data: { labels: [], datasets: [
+      { label: "Blocked", data: [], backgroundColor: "#00ff7f" }
+    ]},
+    options: { responsive: true, maintainAspectRatio: false }
   });
 }
 
+function updateTables() {
+  const devices = [
+    { name: "iPhone", ip: "192.168.1.10", req: 1200, status: "good" },
+    { name: "TV", ip: "192.168.1.15", req: 800, status: "warn" },
+    { name: "Laptop", ip: "192.168.1.20", req: 2300, status: "good" }
+  ];
+
+  const domains = [
+    { domain: "ads.google.com", hits: 540, risk: "bad" },
+    { domain: "tracker.site.com", hits: 320, risk: "warn" },
+    { domain: "malware.test", hits: 150, risk: "bad" }
+  ];
+
+  document.getElementById("devicesTable").innerHTML =
+    devices.map(d => `
+      <tr>
+        <td>${d.name}</td>
+        <td>${d.ip}</td>
+        <td>${d.req}</td>
+        <td><span class="status-dot status-${d.status}"></span></td>
+      </tr>`).join("");
+
+  document.getElementById("domainsTable").innerHTML =
+    domains.map(d => `
+      <tr>
+        <td>${d.domain}</td>
+        <td>${d.hits}</td>
+        <td><span class="status-dot status-${d.risk}"></span></td>
+      </tr>`).join("");
+}
+
+function updateUI() {
+  document.getElementById("blocked").innerText = Math.floor(Math.random()*500);
+  document.getElementById("queries").innerText = Math.floor(Math.random()*10000);
+  document.getElementById("devices").innerText = Math.floor(Math.random()*20);
+  document.getElementById("internet").innerText = "Online";
+}
+
 function updateCharts() {
-  const time = new Date().toLocaleTimeString();
+  const t = new Date().toLocaleTimeString();
+  const val = Math.random()*200;
+  const blocked = Math.random()*100;
 
-  const total = Math.floor(Math.random() * 200);
-  const blocked = Math.floor(Math.random() * 100);
-
-  // Update activity chart
-  activityChart.data.labels.push(time);
-  activityChart.data.datasets[0].data.push(total);
+  activityChart.data.labels.push(t);
+  activityChart.data.datasets[0].data.push(val);
   activityChart.data.datasets[1].data.push(blocked);
 
   if (activityChart.data.labels.length > 10) {
@@ -67,8 +74,7 @@ function updateCharts() {
 
   activityChart.update();
 
-  // Update threat chart
-  threatChart.data.labels.push(time);
+  threatChart.data.labels.push(t);
   threatChart.data.datasets[0].data.push(blocked);
 
   if (threatChart.data.labels.length > 10) {
@@ -79,42 +85,12 @@ function updateCharts() {
   threatChart.update();
 }
 
-function updateUI() {
-  const blocked = Math.floor(Math.random() * 500);
-  const queries = Math.floor(Math.random() * 10000);
-  const devices = Math.floor(Math.random() * 20);
-  const internet = "Online";
-
-  setValue("blocked", blocked);
-  setValue("queries", queries.toLocaleString());
-  setValue("devices", devices);
-  setStatus("internet", internet);
-}
-
-function setValue(id, value) {
-  const el = document.getElementById(id);
-  el.innerText = value;
-}
-
-function setStatus(id, status) {
-  const el = document.getElementById(id);
-  el.innerText = status;
-
-  el.classList.remove("good", "warn", "bad");
-
-  if (status === "Online") {
-    el.classList.add("good");
-  } else {
-    el.classList.add("bad");
-  }
-}
-
-// INIT
 initCharts();
+updateTables();
 updateUI();
 
-// LOOP
 setInterval(() => {
   updateUI();
   updateCharts();
+  updateTables();
 }, 5000);
