@@ -1,5 +1,5 @@
 function updateUI() {
-  // Placeholder data (we will connect Pi-hole later)
+  // Placeholder data (will be replaced with real Pi-hole data later)
 
   document.getElementById("blocked").innerText = "128";
   document.getElementById("queries").innerText = "8,432";
@@ -7,5 +7,8 @@ function updateUI() {
   document.getElementById("internet").innerText = "Online";
 }
 
+// Initial load
 updateUI();
+
+// Refresh every 5 seconds
 setInterval(updateUI, 5000);
