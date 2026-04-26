@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <title>Forged Circuit</title>
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -47,12 +50,12 @@
     <div class="grid-2">
       <div class="card large">
         <h3>Network Activity (Live)</h3>
-        <div class="placeholder">Chart Coming Soon</div>
+        <canvas id="activityChart"></canvas>
       </div>
 
       <div class="card large">
         <h3>Threat Blocking Trend</h3>
-        <div class="placeholder">Chart Coming Soon</div>
+        <canvas id="threatChart"></canvas>
       </div>
     </div>
   </div>
