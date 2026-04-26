@@ -25,6 +25,7 @@ body {
   color: var(--text);
 }
 
+/* HEADER */
 .header {
   display: flex;
   align-items: center;
@@ -33,9 +34,14 @@ body {
   background: var(--card);
 }
 
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .logo {
   height: 40px;
-  margin-right: 10px;
 }
 
 .title {
@@ -49,13 +55,31 @@ body {
   color: var(--subtext);
 }
 
-.grid {
+/* SECTIONS */
+.section {
+  padding: 10px 20px;
+}
+
+/* GRID LAYOUTS */
+.grid-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
-  padding: 20px;
 }
 
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+/* CARDS */
 .card {
   background: var(--card);
   padding: 15px;
@@ -63,8 +87,27 @@ body {
   text-align: center;
 }
 
+.card.large {
+  height: 220px;
+}
+
 .card h3 {
   margin: 0;
   font-size: 14px;
   color: var(--primary);
+}
+
+/* VALUES */
+.value {
+  font-size: 28px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* PLACEHOLDERS */
+.placeholder {
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--subtext);
+  opacity: 0.7;
 }
