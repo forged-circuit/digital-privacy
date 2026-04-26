@@ -1,6 +1,5 @@
 // ==========================================
 // Forged Circuit - Feature Flag System v1
-// Controls Basic / Pro / Business behavior
 // ==========================================
 
 // 🔐 Change this to test tiers
@@ -50,7 +49,10 @@ function hasFeature(featureName) {
 }
 
 // ==========================================
-// OPTIONAL: DEBUG OUTPUT (SAFE TO REMOVE)
+// EXPORT (IMPORTANT FIX)
 // ==========================================
+window.USER_TIER = USER_TIER;
+window.hasFeature = hasFeature;
+
 console.log("Forged Circuit Tier:", USER_TIER);
-console.log("Enabled Features:", FEATURES[USER_TIER]);
+console.log("Features Loaded:", FEATURES[USER_TIER]);
