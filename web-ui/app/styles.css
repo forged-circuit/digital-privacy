@@ -1,8 +1,28 @@
+:root {
+  --bg: #ffffff;
+  --card: #f4f4f5;
+  --text: #111827;
+  --subtext: #555;
+  --primary: #00bfff;
+  --good: #00ff7f;
+  --warn: #ffff00;
+  --bad: #ff3b30;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0f1a;
+    --card: #111827;
+    --text: #c0c0c0;
+    --subtext: #9ca3af;
+  }
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #0b0f1a;
-  color: #c0c0c0;
+  background: var(--bg);
+  color: var(--text);
 }
 
 .header {
@@ -10,7 +30,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background: #111827;
+  background: var(--card);
 }
 
 .logo {
@@ -21,12 +41,12 @@ body {
 .title {
   font-size: 20px;
   font-weight: bold;
-  color: #00bfff;
+  color: var(--primary);
 }
 
 .subtitle {
   font-size: 12px;
-  color: #aaa;
+  color: var(--subtext);
 }
 
 .grid {
@@ -37,7 +57,7 @@ body {
 }
 
 .card {
-  background: #111827;
+  background: var(--card);
   padding: 15px;
   border-radius: 10px;
   text-align: center;
@@ -46,5 +66,5 @@ body {
 .card h3 {
   margin: 0;
   font-size: 14px;
-  color: #00bfff;
+  color: var(--primary);
 }
